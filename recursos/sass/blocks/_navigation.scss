@@ -1,0 +1,470 @@
+/*------------- #NAVIGATION --------------*/
+
+
+.navigation {
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-numbers {
+  position: relative;
+  background-color: transparent;
+  display: inline-block;
+  margin: 0 12px 0 0;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  color: $secondary-color;
+  font-size: 18px;
+  border-radius: 100%;
+  border: 3px solid transparent;
+  font-weight: $h-font-weight;
+
+  &:hover {
+	border-color: $secondary-color;
+	box-shadow: inset 2px 4px 0 0 $primary-color, 2px 4px 0 0 $primary-color;
+  }
+
+  &:active {
+	box-shadow: inset 2px 4px 0 0 transparent, 2px 4px 0 0 transparent;
+	background-color: $primary-color;
+	color: $secondary-color;
+	border-color: transparent;
+  }
+
+  &.current {
+	background-color: $primary-color;
+
+	&:hover {
+	  border-color: transparent;
+	  box-shadow: inset 2px 4px 0 0 transparent, 2px 4px 0 0 transparent;
+	}
+  }
+
+  span {
+	position: relative;
+  }
+
+  &.btn-next,
+  &.btn-prev {
+	background-color: transparent;
+	width: auto;
+	height: auto;
+	border: none;
+	box-shadow: none;
+
+	&:active {
+	  box-shadow: inset 2px 4px 0 0 transparent, 2px 4px 0 0 transparent;
+	  background-color: transparent;
+	  border-color: transparent;
+	}
+  }
+
+  &.btn-next {
+	margin-left: auto;
+  }
+
+  &.btn-prev {
+	margin-right: auto;
+  }
+}
+
+/*------------- #NAVIGATION ARROW --------------*/
+
+.navigation--arrow {
+  a {
+	&:hover {
+	  color: $primary-color;
+
+	  .woox-icon {
+		fill: $primary-color;
+	  }
+	}
+  }
+
+  .btn--round {
+	width: 60px;
+	height: 60px;
+  }
+}
+
+
+/*------------- #NAVIGATION ARROW Style 2 --------------*/
+
+
+.navigation-arrow--style2 {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .btn-content-title {
+	font-weight: $h-font-weight;
+	color: $grey;
+  }
+
+  .btn-content {
+	position: relative;
+
+	.btn-content-subtitle {
+	  font-size: 18px;
+	  color: $secondary-color;
+	  font-weight: $h_font-weight;
+	}
+
+  }
+
+  .double-arrow {
+
+	.woox-icon {
+	  width: 40px;
+	  height: 40px;
+	  fill: $icon-color;
+	  z-index: 2;
+	  position: relative;
+
+	  &.icon-hover {
+		position: absolute;
+		top: 1px;
+		right: -3px;
+		opacity: 0;
+		z-index: 1;
+	  }
+	}
+  }
+
+  .btn-prev-wrap,
+  .btn-next-wrap {
+	max-width: 47%;
+  }
+}
+
+.btn-next-wrap {
+  display: flex;
+  align-items: center;
+
+  .double-arrow {
+	margin-left: 40px;
+  }
+
+  &:hover {
+	margin-right: -2px;
+
+	.link--with-decoration:after {
+	  bottom: -7px;
+	  height: 5px;
+	}
+
+	.btn-content-subtitle {
+	  color: $primary-color;
+	}
+
+	.woox-icon {
+	  fill: $secondary-color;
+
+	  &.icon-hover {
+		opacity: 1;
+		fill: $primary-color;
+	  }
+	}
+  }
+}
+
+.btn-prev-wrap {
+  display: flex;
+  align-items: center;
+
+  .double-arrow {
+	margin-right: 40px;
+  }
+
+  &:hover {
+	margin-left: -2px;
+
+	.link--with-decoration:after {
+	  bottom: -7px;
+	  height: 5px;
+	}
+
+	.btn-content-subtitle {
+	  color: $primary-color;
+	}
+
+	.woox-icon {
+	  fill: $secondary-color;
+
+	  &.icon-hover {
+		opacity: 1;
+		fill: $primary-color;
+	  }
+	}
+
+  }
+}
+
+
+/*------------- #NAVIGATION CASES --------------*/
+
+.navigation--cases {
+  .navigation-case-item {
+	width: 48%;
+	position: relative;
+	border-radius: 50px;
+	overflow: hidden;
+
+	.btn--round {
+	  min-width: 50px;
+	  min-height: 50px;
+	}
+
+	img {
+	  display: block;
+	}
+
+	&:hover {
+	  .overlay-standard, .content-wrap {
+		opacity: 1;
+	  }
+	}
+
+	.overlay-standard {
+	  opacity: 0;
+	  border-radius: inherit;
+	}
+
+	.content-wrap {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width: 80%;
+	  transform: translate(-50%, -50%);
+	  opacity: 0;
+	  transition: all .3s ease;
+	  display: flex;
+	  align-items: flex-end;
+	  justify-content: space-around;
+	}
+
+	.content {
+	  flex-shrink: 10;
+	}
+
+	.category {
+	  color: $white-color;
+	  margin-bottom: 20px;
+	}
+
+	.portfolio-title {
+	  color: $primary-color;
+	  margin-bottom: 0;
+	}
+
+	&.next-prev {
+	  text-align: right;
+
+	  .content-wrap {
+		flex-direction: row-reverse;
+	  }
+	}
+  }
+}
+
+
+/*------------- #NAVIGATION POSTS --------------*/
+
+
+.navigation--posts {
+  .navigation-post-item {
+	width: 48%;
+	position: relative;
+	border-radius: 50px;
+	overflow: hidden;
+	display: block;
+
+	img {
+	  display: block;
+	}
+
+	&:hover {
+	  .overlay-standard {
+		opacity: 1;
+	  }
+
+	  .post-title {
+		max-height: 200px;
+		opacity: 1;
+		visibility: visible;
+	  }
+
+	  .category {
+		transform: scale(.8);
+	  }
+	}
+
+	.overlay-standard {
+	  opacity: 0;
+	  border-radius: inherit;
+	}
+
+	.content-wrap {
+	  position: absolute;
+	  width: 80%;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  transition: all .3s ease;
+	  text-align: center;
+	}
+
+	.category {
+	  color: $white-color;
+	  margin-bottom: 10px;
+	  font-size: 22px;
+	  transition: all .3s ease;
+	}
+
+	.post-title {
+	  color: $primary-color;
+	  margin-bottom: 0;
+	  opacity: 0;
+	  visibility: hidden;
+	  max-height: 0;
+	  transition: all .5s ease;
+	}
+  }
+}
+
+.comments-wrap {
+  background-color: $white-color;
+  border-radius: 50px;
+  padding: 40px;
+}
+
+.comments-wrap--big {
+  padding: 120px;
+  box-shadow: 60px 0 100px rgba(61,67,79,.05);
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .comments-wrap--big {
+	padding: 40px;
+  }
+
+  .btn-next-wrap .double-arrow {
+	margin-left: 20px;
+  }
+
+  .btn-prev-wrap .double-arrow {
+	margin-right: 20px;
+  }
+
+  .navigation--cases .navigation-case-item .portfolio-title {
+	font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navigation--cases .navigation-case-item .portfolio-title {
+	display: none;
+  }
+
+  .navigation--cases .navigation-case-item .content-wrap {
+	align-items: center;
+	opacity: 1;
+  }
+
+  .navigation--cases .navigation-case-item .overlay-standard {
+	opacity: 1;
+  }
+
+  .page-numbers {
+	margin: 0 8px 0 0;
+	width: 30px;
+	height: 30px;
+	line-height: 26px;
+	font-size: 16px;
+
+	&:hover {
+	  border-color: transparent;
+	  box-shadow: none;
+	  color: $primary-color;
+	}
+
+	&:active {
+	  box-shadow: none;
+	  background-color: transparent;
+	  color: $secondary-color;
+	}
+
+	&.current {
+	  background-color: transparent;
+	  color: $primary-color;
+
+	  &:hover {
+		border-color: transparent;
+	  }
+	}
+  }
+
+  .btn-next .woox-icon, .btn-prev .woox-icon, .swiper-btn-next .woox-icon, .swiper-btn-prev .woox-icon {
+	width: 30px;
+	height: 30px;
+  }
+
+  .comments-wrap {
+	padding: 20px;
+  }
+
+  .comments-wrap--big {
+	padding: 20px;
+  }
+
+  .navigation--arrow .btn--round {
+	width: 40px;
+	height: 40px;
+	min-width: 40px;
+	min-height: 40px;
+
+  }
+
+  .navigation-arrow--style2 .double-arrow .woox-icon {
+	width: 30px;
+	height: 30px;
+  }
+
+  .navigation-arrow--style2 .btn-content .btn-content-subtitle {
+	font-size: 14px;
+  }
+
+  .navigation--posts .navigation-post-item .post-title {
+	display: none;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .navigation--arrow {
+	flex-direction: column;
+
+	& > * + * {
+	  margin-left: 0;
+	  margin-top: 20px;
+	}
+
+	.btn + .btn {
+	  margin-left: 0;
+	}
+  }
+
+  .navigation--posts .navigation-post-item .category {
+	font-size: 18px;
+  }
+}

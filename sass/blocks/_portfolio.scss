@@ -1,0 +1,327 @@
+/*------------- #PORTFOLIO --------------*/
+
+
+.crumina-portfolio-item {
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  display: block;
+  overflow: hidden;
+
+  img {
+	display: block;
+  }
+
+  .like-block {
+	color: $white-color;
+	fill: $white-color;
+
+	.count {
+	  color: $white-color;
+	}
+  }
+
+  .category {
+	display: block;
+	color: $primary-color;
+	opacity: .8;
+	margin-bottom: 20px;
+
+	&:hover {
+	  opacity: 1;
+	}
+  }
+
+  &:hover {
+	.content, .additional-info, .overlay-standard {
+	  opacity: 1;
+	}
+  }
+
+  .overlay-standard {
+    opacity: 0;
+	background: rgba(51, 57, 68, 0.8);
+	border-radius: inherit;
+  }
+
+  .content {
+    opacity: 0;
+    transition: all .3s ease;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+	right: 80px;
+
+	.portfolio-title {
+	  color: $white-color;
+	  margin-bottom: 30px;
+	}
+  }
+
+  .additional-info {
+	opacity: 0;
+	transition: all .3s ease;
+	position: absolute;
+	bottom: 80px;
+	left: 80px;
+  }
+}
+
+.grid-sizer {
+  width: 33.3333%;
+}
+
+.grid-sizer-half-width {
+  width: 50%;
+}
+
+.grid-sizer-full-width {
+  width: 100%;
+}
+
+.like-block {
+  display: flex;
+  align-items: center;
+  fill: $red;
+
+  &:hover {
+	color: $primary-color;
+	fill: $primary-color;
+
+	.count {
+	  color: $primary-color;
+	}
+  }
+
+  .woox-icon {
+	width: 27px;
+	height: 27px;
+  }
+
+  .count {
+	font-weight: $h-font-weight;
+	margin-left: 10px;
+	color: $grey;
+	transition: all .3s ease;
+  }
+}
+
+.like-block--btn {
+  padding: 20px 35px;
+  border-radius: 50px;
+  background-color: rgba(239, 242, 246, .05);
+  fill: $red;
+}
+
+.additional-info {
+  display: flex;
+  align-items: center;
+
+  & > * + * {
+	margin-left: 40px;
+  }
+}
+
+.sorting-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.portfolio-item--content-center {
+  .content {
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	right: auto;
+	transform: translate(-50%, -50%);
+	width: 80%;
+  }
+
+  .additional-info {
+	position: relative;
+	bottom: auto;
+	left: auto;
+	justify-content: center;
+
+	.like-block {
+	  fill: $red;
+	}
+  }
+}
+
+.portfolio-item--related-case {
+  .content {
+	top: 60px;
+	bottom: 60px;
+	left: 60px;
+	right: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+
+  .category {
+	font-size: .875em;
+  }
+}
+
+/*------------- #Gallery items --------------*/
+
+.gallery-item-wrap {
+  .gallery-item {
+	margin-bottom: 40px;
+  }
+}
+
+.gallery-description {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+
+  img {
+	display: block;
+	border-radius: 50px;
+	margin: 0 auto;
+  }
+
+  &:hover {
+
+	.overlay-standard {
+	  opacity: 1;
+	}
+
+	.zoom-image {
+	  opacity: 1;
+
+	  &:hover {
+		transform: scale(1) translate(-50%, -50%);
+
+		.woox-icon {
+		  color: $primary-color;
+		}
+	  }
+	}
+  }
+
+  .overlay-standard {
+	opacity: 0;
+	border-radius: inherit;
+  }
+
+  .zoom-image {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(.85) translate(-50%, -50%);
+	display: block;
+	z-index: 10;
+
+	.woox-icon {
+	  width: 40px;
+	  height: 40px;
+	  fill: $white-color;
+	  color: $white-color;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1400px) {
+  .crumina-portfolio-item .content {
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 90%;
+  }
+
+  .crumina-portfolio-item .additional-info {
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 90%;
+  }
+
+  .portfolio-item--content-center .content {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+  .portfolio-item--content-center .additional-info {
+	bottom: auto;
+	left: auto;
+	right: auto;
+	transform: translate(0);
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .portfolio-item--content-center .content {
+	display: block;
+	width: 90%;
+  }
+
+  .portfolio-item--content-center .additional-info {
+	bottom: auto;
+	left: auto;
+	right: auto;
+	transform: translate(0);
+	width: 100%;
+  }
+
+  .crumina-portfolio-item .like-block {
+	margin-left: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .grid-sizer {
+	width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .crumina-portfolio-item .content .portfolio-title {
+	font-size: 16px;
+  }
+
+  .crumina-portfolio-item .category {
+	font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .like-block--btn {
+	padding: 10px;
+  }
+
+  .crumina-portfolio-item .content .portfolio-title {
+	font-size: 12px;
+  }
+
+  .crumina-portfolio-item .category {
+	font-size: 10px;
+	margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 570px) {
+
+  .crumina-portfolio-item .content .portfolio-title {
+	font-size: 16px;
+  }
+
+  .crumina-portfolio-item .category {
+	font-size: 12px;
+	margin-bottom: 15px;
+  }
+}

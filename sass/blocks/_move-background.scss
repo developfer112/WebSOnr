@@ -1,0 +1,88 @@
+/*------------- #MOVE BACKGROUND --------------*/
+
+
+.crumina-flying-balls {
+  position: relative;
+
+  *[class*="col-"] {
+    z-index: 100;
+  }
+
+  &:after {
+	content: '';
+	display: block;
+	height: 300px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	-webkit-box-shadow: inset 0px -200px 119px -40px rgba(255,255,255,1);
+	-moz-box-shadow: inset 0px -200px 119px -40px rgba(255,255,255,1);
+	box-shadow: inset 0px -150px 119px -40px rgba(255,255,255,1);
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  max-height: 100vh;
+}
+
+.crumina-parallax-background {
+  position: relative;
+  overflow: hidden;
+
+  .scene {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+  }
+
+  .layer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+  }
+
+  .first-layer {
+	background-image: url("../img/layer-1.png");
+  }
+
+  .second-layer {
+	background-image: url("../img/layer-2.png");
+	background-position: right center;
+  }
+
+  .third-layer {
+	background-image: url("../img/layer-3.png");
+  }
+}
+
+.static-circle-bg1 {
+  background-image: url("../img/static-circle-bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.static-circle-bg2 {
+  background-image: url("../img/static-circle-bg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.static-circle-bg3 {
+  background-image: url("../img/static-circle-bg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}

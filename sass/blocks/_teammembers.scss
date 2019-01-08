@@ -1,0 +1,172 @@
+/*------------- #TEAMMEMBERS --------------*/
+
+
+.crumina-teammembers-item {
+  display: inline-block;
+
+  &:hover {
+	.overlay-standard {
+	  opacity: 1;
+	}
+
+	.btn {
+	  opacity: 1;
+	}
+  }
+}
+
+.teammembers-thumb {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+
+  img {
+	display: block;
+  }
+
+  .overlay-standard {
+	opacity: 0;
+	border-radius: inherit;
+  }
+
+  .btn {
+	position: absolute;
+	top: 60px;
+	right: 60px;
+	opacity: 0;
+  }
+
+  .teammember-content {
+	position: absolute;
+	bottom: 60px;
+	left: 60px;
+  }
+}
+
+.teammembers-item-name {
+  color: $white-color;
+
+  &:hover {
+	color: $primary-color;
+  }
+}
+
+.teammembers-item-prof {
+  color: $grey;
+}
+
+.send-resume {
+  text-align: center;
+  padding: 80px 110px;
+
+  img {
+	height: 80px;
+	margin-bottom: 30px;
+  }
+
+  .title {
+	font-size: 24px;
+	color: $secondary-color;
+	margin-bottom: 30px;
+	line-height: 1;
+  }
+}
+
+.teammember-details {
+  position: relative;
+  overflow: hidden;
+
+  .teammembers-thumb {
+	border-radius: 0;
+	float: left;
+	max-width: 50%;
+  }
+
+  .teammembers-content {
+	padding: 100px;
+	overflow: hidden;
+
+	blockquote {
+	  padding: 50px;
+	  margin-bottom: 0;
+
+	  p {
+		font-size: 24px;
+		margin-bottom: 0;
+	  }
+	}
+
+	.teammembers-item-name {
+	  color: $heading-color;
+	}
+
+	.socials {
+	  margin-top: 70px;
+	}
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 999;
+
+  &:hover {
+	.woox-icon {
+	  fill: $primary-color;
+	}
+  }
+
+  .woox-icon {
+	width: 60px;
+	height: 60px;
+	fill: $icon-color;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1300px) {
+  .send-resume {
+	padding: 20px;
+  }
+
+  .teammember-details .teammembers-content {
+	padding: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .teammember-details .teammembers-content blockquote {
+	padding: 20px;
+  }
+
+  .teammember-details .teammembers-content {
+	padding: 20px;
+  }
+
+  .teammember-details .teammembers-content blockquote p {
+	font-size: 18px;
+  }
+
+  .popup-close {
+	top: 20px;
+	right: 20px;
+  }
+
+  .popup-close .woox-icon {
+	width: 40px;
+	height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .teammember-details .teammembers-thumb {
+	float: none;
+	max-width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+/*------------- #W-SUBSCRIBE --------------*/
+
+
+.widget.w-subscribe {
+  background-color: $primary-color;
+  text-align: center;
+
+  p {
+	font-weight: $h-font-weight;
+	margin: 20px 0;
+	color: $secondary-color;
+
+	&:last-child {
+	  font-size: 14px;
+	  margin-bottom: 0;
+	  color: $white-color;
+	}
+  }
+
+  .title {
+	font-size: 36px;
+	font-family: 'Playfair Display', serif;
+	line-height: 1;
+	margin-top: 0;
+  }
+}

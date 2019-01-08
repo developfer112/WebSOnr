@@ -1,0 +1,50 @@
+/*------------- #W-SHARED-POSTS --------------*/
+
+
+.w-shared-posts {
+  .list-shared-post {
+	padding-left: 0;
+    margin: 0;
+	list-style: none;
+  }
+
+  .divider {
+	margin: 10px 0;
+  }
+}
+
+.post-shared {
+  display: flex;
+  align-items: center;
+
+  .post-thumb {
+	border-radius: 10px;
+	margin-right: 20px;
+	flex-shrink: 1;
+  }
+
+  .category {
+	font-size: 14px;
+	color: $primary-color;
+	opacity: .8;
+
+	&:hover {
+	  opacity: 1;
+	}
+  }
+
+  .post__title {
+	font-size: 16px;
+  }
+
+  .share-counter {
+	font-size: 14px;
+	color: $grey;
+	font-weight: $h-font-weight;
+  }
+
+  .post__content {
+	padding: 0;
+	flex-shrink: 20;
+  }
+}

@@ -1,0 +1,53 @@
+/*------------- #W-RECENT-COMMENTS --------------*/
+
+.w-recent-comments {
+  .recent-comments-list {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+  }
+
+  .avatar {
+	margin-right: 20px;
+	float: left;
+	width: auto;
+	height: auto;
+
+	.woox-icon {
+	  width: 14px;
+	  height: 14px;
+	  fill: #dde2ea;
+	}
+  }
+
+  .divider {
+	margin: 5px auto;
+  }
+
+  .content {
+	overflow: hidden;
+	color: $secondary-color;
+	font-weight: $h-font-weight;
+
+	a {
+	  font-size: 14px;
+	  color: $grey;
+	  margin-right: 15px;
+	  padding-right: 15px;
+	  position: relative;
+
+	  &:before {
+		content: '';
+		display: block;
+		border-radius: 100%;
+		width: 4px;
+		height: 4px;
+		background-color: $grey;
+		position: absolute;
+		top: 50%;
+		margin-top: -2px;
+		right: -4px;
+	  }
+	}
+  }
+}

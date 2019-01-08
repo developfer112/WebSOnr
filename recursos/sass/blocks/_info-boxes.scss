@@ -1,0 +1,391 @@
+/*------------- #INFO-BOXES --------------*/
+
+
+.crumina-info-box {
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.info-box-thumb {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  border-radius: 100%;
+  margin: 0 auto 30px;
+  background-color: $info-box-thumb-bg;
+  transition: all .3s ease;
+
+  .woox-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.info-box-content {
+  overflow: hidden;
+}
+
+.info-box-title {
+  max-width: 75%;
+  margin: 15px auto;
+}
+
+.info-box-text {
+  max-width: 75%;
+  margin: 0 auto 30px;
+}
+
+
+/*------------- #Info-box style2 --------------*/
+
+.info-box--style2 {
+  text-align: left;
+
+  .info-box-thumb {
+    margin: 0 0 30px;
+    height: auto;
+    width: auto;
+    line-height: unset;
+    background-color: transparent;
+
+    .woox-icon {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  }
+
+  .info-box-title {
+    margin: 15px 0;
+  }
+
+  .info-box-text {
+    max-width: none;
+    margin: 0 0 30px 0;
+  }
+}
+
+
+/*------------- #Info-box style3 --------------*/
+
+.info-box--style3 {
+
+  &:hover {
+    .info-box-thumb {
+      box-shadow: inset 3px 5px 0 0 $primary-color, 3px 5px 0 0 $primary-color;
+    }
+  }
+
+  .info-box-title {
+    max-width: none;
+    margin: 15px 0;
+    font-weight: 400;
+
+    &:after {
+      content: ".";
+      font-size: inherit;
+      color: $primary-color;
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .info-box-thumb {
+    border: 3px solid $secondary-color;
+    background-color: transparent;
+  }
+}
+
+
+/*------------- #Info-box style4 --------------*/
+
+.info-box--style4 {
+  border: 4px solid $info-box-border;
+  border-radius: 40px;
+  padding: 50px 60px;
+
+  &:hover {
+	background-color: $white-color;
+	border-color: $white-color;
+    box-shadow: 5px 0 60px 0 rgba(61,67,79,.08);
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+}
+
+
+
+/*------------- #Info-box style5 --------------*/
+
+
+.info-box--style5 {
+  text-align: left;
+
+  .info-box-title {
+    max-width: 75%;
+    margin: 15px 0;
+  }
+
+  .info-box-thumb {
+    width: auto;
+    height: auto;
+    line-height: unset;
+    background-color: transparent;
+    margin: 0 40px 0 0;
+    float: left;
+
+    .woox-icon {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 80px;
+      height: auto;
+    }
+  }
+
+  .info-box-text {
+    max-width: none;
+  }
+}
+
+
+
+/*------------- #Info-box style6 --------------*/
+
+.info-box--style6 {
+  text-align: left;
+  border: 4px solid $info-box-border;
+  border-radius: 40px;
+  padding: 80px;
+
+  &:hover {
+    background-color: $white-color;
+    border-color: $white-color;
+    box-shadow: 5px 0 60px 0 rgba(61,67,79,.08);
+  }
+
+  .info-box-thumb {
+    margin: 0 40px 0 0;
+    float: left;
+  }
+
+  .info-box-title {
+    max-width: none;
+    margin: 0 0 15px;
+  }
+
+  .info-box-text {
+    max-width: none;
+    margin: 0 0 30px;
+  }
+}
+
+
+
+/*------------- #Info-box style7 --------------*/
+
+.info-box--style7 {
+  padding: 0 70px 70px;
+  border: 4px solid $info-box-border;
+  border-radius: 40px;
+  margin-top: 70px;
+
+  &:hover {
+    background-color: $white-color;
+    border-color: $white-color;
+    box-shadow: 5px 0 60px 0 rgba(61,67,79,.08);
+
+    .info-box-thumb {
+      background-color: $info-box-thumb-bg;
+    }
+  }
+
+  .info-box-thumb {
+	margin: -70px auto 30px;
+    background-color: $grey-light;
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+
+  .info-box-title {
+	max-width: none;
+  }
+}
+
+
+/*------------- #Info-box numbered --------------*/
+
+.info-box--numbered {
+  padding: 110px;
+  border-radius: 50px;
+  background-color: $white-color;
+  border: 4px solid transparent;
+  margin-bottom: 40px;
+  box-shadow: 5px 0 60px 0 rgba(61,67,79,.08);
+  text-align: center;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $secondary-color;
+    box-shadow: inset 3px 5px 0 0 $primary-color, 3px 5px 0 0 $primary-color;
+  }
+
+  .info-box-thumb {
+	margin-bottom: 60px;
+	width: auto;
+	height: auto;
+	line-height: unset;
+	border-radius: 0;
+	background-color: transparent;
+
+	.woox-icon {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: none;
+	  width: auto;
+	  height: auto;
+	}
+  }
+
+  .info-box-text {
+	max-width: none;
+	margin-bottom: 50px;
+  }
+
+  .info-box-title {
+	max-width: none;
+	margin-bottom: 25px;
+  }
+
+  .info-box-number {
+    font-family: 'Playfair Display', serif;
+	font-size: 237px;
+    font-weight: $h-font-weight;
+    color: $grey-light;
+    line-height: .3;
+    margin-bottom: -40px;
+  }
+
+  .info-box-sub-title {
+	color: $heading-color;
+	font-weight: $h-font-weight;
+  }
+
+  .info-box-content {
+	margin-bottom: 60px;
+  }
+
+  &.thumb--left {
+	text-align: left;
+    display: flex;
+    align-items: center;
+
+    .info-box-number {
+      margin-left: -40px;
+    }
+
+	.info-box-thumb {
+	  margin-bottom: 0;
+	  margin-right: 110px;
+	}
+
+	.info-box-content {
+	  margin-bottom: 0;
+      flex-shrink: 10;
+      overflow: visible;
+	}
+
+    .info-box-sub-title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 1300px) {
+  .info-box--style6 {
+    padding: 30px;
+  }
+
+  .info-box--numbered {
+    padding: 30px;
+  }
+
+  .info-box--style4 {
+    padding: 30px;
+  }
+
+  .info-box--numbered .info-box-number {
+    font-size: 150px;
+  }
+
+  .info-box--style7 {
+    padding: 0 20px 20px;
+  }
+
+  .info-box--style5 .info-box-thumb {
+    margin: 0 0 40px 0;
+    float: none;
+  }
+
+  .info-box-title {
+	max-width: 100%;
+  }
+
+  .info-box-text {
+	max-width: 100%;
+  }
+
+  .info-box--style6 .info-box-thumb {
+	margin: 0 0 20px 0;
+	float: none;
+  }
+
+  .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+  }
+
+  .info-box--style7 .info-box-thumb {
+	margin: -50px auto 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-box--numbered.thumb--left {
+	flex-direction: column;
+  }
+
+  .info-box--numbered.thumb--left .info-box-thumb {
+	margin-bottom: 40px;
+	margin-right: auto;
+  }
+
+  .info-box--numbered.thumb--left .info-box-number {
+    margin-left: 0;
+  }
+
+  .info-box-thumb {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+  }
+
+  .info-box--style2 .info-box-thumb {
+    margin: 0 0 10px;
+  }
+}

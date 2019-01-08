@@ -1,0 +1,58 @@
+/*------------- #BREADCRUMBS --------------*/
+
+
+
+.breadcrumbs {
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+  margin-bottom: 0;
+
+  a {
+	margin-right: 30px;
+	padding-right: 35px;
+	opacity: .8;
+	font-size: 22px;
+	display: inline-block;
+	position: relative;
+	color: $primary-color;
+
+	&:after {
+	  content: '/';
+	  display: inline-block;
+	  color: $secondary-color;
+	  font-size: 22px;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}
+
+	&:hover {
+	  opacity: 1;
+	}
+  }
+
+  &.active {
+	span {
+	  font-weight: $h-font-weight;
+	  color: $grey;
+	  font-size: 16px;
+	}
+  }
+}
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .breadcrumbs-item a {
+	margin-right: 5px;
+	padding-right: 20px;
+	font-size: 16px;
+  }
+
+  .breadcrumbs-item a::after {
+	font-size: 16px;
+  }
+}

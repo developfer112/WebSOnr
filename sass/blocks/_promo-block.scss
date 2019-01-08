@@ -1,0 +1,66 @@
+/*------------- #PROMO BLOCK --------------*/
+
+
+.promo-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 120px;
+  border-radius: 50px;
+  box-shadow: 15px 0 40px 0 rgba(61, 67, 79, .08);
+  background-color: $white-color;
+
+  .btn {
+    width: 40%;
+  }
+
+  & > * + * {
+    margin-left: 30px;
+  }
+
+  .window-popup {
+    margin-top: 0 !important;
+
+    .btn {
+      width: auto;
+    }
+  }
+}
+
+.promo-title  {
+  font-size: 30px;
+  color: $heading-color;
+  font-weight: 300;
+}
+
+.promo-text {
+  font-size: 22px;
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 1024px) {
+  .promo-block {
+    padding: 40px;
+    flex-direction: column;
+    text-align: center;
+
+	.btn {
+	  width: auto;
+	}
+
+    & > * + * {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  .promo-title {
+	font-size: 20px;
+  }
+
+  .promo-text {
+	font-size: 18px;
+  }
+}

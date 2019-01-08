@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Woox - Single Post Left Sidebar</title>
+
+	<link rel="stylesheet" type="text/css" href="css/plugins.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme-styles.min.css">
+	<link rel="stylesheet" type="text/css" href="css/blocks.min.css">
+	<link rel="stylesheet" type="text/css" href="css/widgets.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700i,900," rel="stylesheet">
+
+
+	<!--Styles for RTL-->
+
+	<!--<link rel="stylesheet" type="text/css" href="css/rtl.css">-->
+
+
+</head>
+
+<body class="crumina-grid">
+
+<!-- Preloader -->
+
+<div id="hellopreloader">
+	<div class="preloader">
+		<svg width="80" height="80" fill="#fff" viewBox="0 0 105 105">
+			<circle cx="12.5" cy="12.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+				<animate attributeName="fill-opacity" begin="100ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="52.5" cy="12.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="300ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="52.5" cy="52.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="600ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="92.5" cy="12.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="800ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="92.5" cy="52.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="400ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="12.5" cy="92.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="700ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="52.5" cy="92.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="500ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+			<circle cx="92.5" cy="92.5" r="12.5">
+				<animate attributeName="fill-opacity" begin="200ms" calcMode="linear" dur="1s" repeatCount="indefinite" values="1;.2;1"/>
+			</circle>
+		</svg>
+		<div class="text">Loading ...</div>
+	</div>
+</div>
+
+<!-- ... end Preloader -->
+
+<!-- Header -->
+
+<header class="header" id="site-header">
+	<div class="container">
+		<div class="header-content-wrapper">
+			<a href="index.html" class="site-logo">
+				<img src="img/logo-dark.png" alt="Woox">
+				<svg class="woox-icon" viewBox="0 0 481.448 101.996">							<path d="M152.514 14.926c0 2.1-1.339 4.593-2.1 7.081L126.3 89.366c-2.487 7.654-8.229 11.673-14.543 11.673-6.889 0-12.056-4.019-15.309-11.673L76.162 43.822 55.877 89.366c-3.253 7.654-8.994 11.673-15.309 11.673-6.7 0-12.056-4.019-14.543-11.673L2.1 22.007C1.148 19.519 0 17.031 0 14.926A14.213 14.213 0 0 1 14.352.574c5.358 0 11.1 3.062 12.821 8.037l15.5 49.18L62.575 9.76C65.063 3.827 69.655.574 76.162.574c6.7 0 11.29 3.253 13.778 9.186l19.71 48.031 15.692-49.18c1.531-4.593 7.271-8.037 12.821-8.037a14.212 14.212 0 0 1 14.351 14.352zM263.69 51.285c0 34.253-29.853 50.711-51.667 50.711-22.006 0-51.859-16.458-51.859-50.711C160.164 17.223 190.016 0 212.022 0c21.815 0 51.668 17.223 51.668 51.285zm-73.292 0c0 14.352 9.568 24.3 21.624 24.3 11.864 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.055 0-21.622 9.951-21.622 24.877zm190.974 0c0 34.253-29.853 50.715-51.672 50.715-22.006 0-51.858-16.458-51.858-50.711C277.845 17.223 307.7 0 329.7 0c21.819 0 51.672 17.223 51.672 51.285zm-73.291 0c0 14.352 9.567 24.3 21.623 24.3 11.865 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.056 0-21.623 9.951-21.623 24.877zm173.367 36.932c0 7.271-6.7 13.4-13.97 13.4-4.4 0-7.846-2.3-10.716-5.55l-21.05-24.686-21.05 24.686c-2.87 3.253-6.123 5.55-10.716 5.55-7.08 0-13.97-6.124-13.97-13.4a12.074 12.074 0 0 1 3.254-8.229l25.45-28.9-25.45-28.9a12.348 12.348 0 0 1-3.062-8.037c0-7.463 6.89-13.586 13.97-13.586a13.062 13.062 0 0 1 10.716 5.549L435.712 30.8l20.859-24.676c2.87-3.444 6.315-5.549 10.907-5.549 6.89 0 13.778 6.124 13.778 13.586a12.352 12.352 0 0 1-3.062 8.037l-25.451 28.9 25.451 28.9a11.252 11.252 0 0 1 3.254 8.219z" data-name="Слой 2"/>						</svg>
+			</a>
+
+			<a href="#" class="open-main-menu js-open-aside js-body-overlay">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<!-- ... end Header -->
+
+
+<!--For this overlay style, add the "js-body-overlay" class for the opening button and for the closing-button overlay-->
+
+<!-- Overlay Menu -->
+
+<div class="overlay-menu-wrap overlay-menu--style2" id="overlay-menu">
+	<a class='popup-close js-open-aside js-body-overlay' href='#'>
+		<svg class="woox-icon icon-close"><use xlink:href="svg-icons/sprites/icons.svg#icon-close"></use></svg>
+	</a>
+	<div class="perfect-scroll">
+		<nav class="overlay-menu">
+			<ul class="overlay-menu-list">
+				<li class="overlay-menu-item">
+					<a href="index.html">home</a>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">agency</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="002_agency.html">about agency</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="003_team.html">our team</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="004_member_details.html">member details</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="005_services.html">services</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="006_testimonials.html">testimonials</a>
+						</li>
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">portfolio</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="007_portfolio_irregular_masonry.html">irregural</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="008_portfolio_masonry.html">masonry</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="009_portfolio_two_columns.html">two columns</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="010_case_details_standard.html">case standard</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="011_case_details_slider.html">case slider</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="012_case_details_builder.html">case builder</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="013_lightbox-gallery.html">lightbox gallery</a>
+						</li>
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">blog</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="014_blog_masonry.html">masonry</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="015_blog_sidebar.html">sidebar</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="016_blog_wide.html">wide</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="017_single_post_right_sidebar.html">single right sidebar</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="018_single_post_left_sidebar.html">single left sidebar</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="019_single_post_sidebar_below_title.html">single below title</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="020_single_post_wide.html">single wide</a>
+						</li>
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">contact us</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="021_contacts.html">contacts</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="022_fullscreen_contacts.html">fullscreen contacts</a>
+						</li>
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">pages</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="023_page_not_found.html">not found</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="024_wide_sliding_side_menu.html">wide menu</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="025_opacity-sliding-side-menu.html">sliding menu</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="026_fullscreen_hamburger_menu.html">hamburger menu</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="027_pricing_tables.html">pricing tables</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="028_forms.html">forms</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="029_quotes.html">quotes</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">blocks</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="030_tables.html">tables</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="031_tabs.html">tabs</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="032_testimonial_styles.html">testimonials</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="033_benefits.html">benefits</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="034_progress_bars.html">progress bars</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="035_alerts_message.html">alerts</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="overlay-menu-item">
+					<a href="#">typography</a>
+					<ul class="sub-menu">
+						<li class="overlay-menu-item">
+							<a href="036_button_styles.html">buttons</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="037_accordion_toggle.html">accordions</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="038_typography.html">typography style</a>
+						</li>
+						<li class="overlay-menu-item">
+							<a href="039_headings.html">headings</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="040_link_styles.html">link styles</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="041_dividers.html">dividers</a>
+						</li>
+
+						<li class="overlay-menu-item">
+							<a href="042_colors.html">colors</a>
+						</li>
+
+					</ul>
+				</li>
+			</ul>
+			<form method="get" class="form--search">
+				<div class="input-with-icon">
+					<input name="name" placeholder="What are you looking for?" type="text">
+					<i class="woox-icon fas fa-search"></i>
+				</div>
+			</form>
+		</nav>
+	</div>
+</div>
+
+<!-- ... Overlay Menu -->
+
+
+<div class="main-content-wrapper">
+
+	<section data-settings="particles-1" class="main-section crumina-flying-balls particles-js">
+		<div class="container">
+			<div class="row medium-padding120">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<header class="crumina-module crumina-heading heading--h2 heading--with-decoration no-margin">
+						<ul class="breadcrumbs">
+							<li class="breadcrumbs-item">
+								<a href="#">blog</a>
+							</li>
+							<li class="breadcrumbs-item active">
+								<span>single post</span>
+							</li>
+						</ul>
+						<h2 class="heading-title heading--half-colored">Read our <b>blog</b></h2>
+						<div class="heading-text">Eodem modo typi, qui nunc nobis videntur parum clari.</div>
+					</header>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row pb120">
+				<!-- Blog post Details-->
+				<div class="col-lg-8 col-lg-push-4 col-md-12 col-sm-12 col-xs-12">
+					<article class="hentry post post-standard has-post-thumbnail post-standard-details slider">
+
+						<div class="post__content">
+
+							<div class="post__content-info">
+
+								<a href="#" class="category">category</a>
+
+								<h5 class="h4 post__title entry-title">Sed sed risus pretium quam vulputate dignissim tristique senect ullamcorper eget nulla facilisi</h5>
+
+								<div class="post-additional-info">
+
+									<div class="post-comments-date-wrap">
+										<div class="post__author-name fn">
+											by
+											<a href="#" class="post__author-link">Philip Demarco </a>
+										</div>
+
+										<div class="post__date">
+											<time class="published" datetime="2018-03-26 12:00:00">
+												Mar 26, 2018
+											</time>
+										</div>
+
+										<div class="post__comments">
+											<a href="#">16 Comments</a>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="post-thumb">
+								<div class="crumina-module crumina-module-slider pagination-bottom-center">
+
+									<div class="swiper-container" data-show-items="1">
+
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide">
+												<img src="img/blog4.jpg" alt="video">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/blog4.jpg" alt="video">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/blog4.jpg" alt="video">
+											</div>
+
+											<div class="swiper-slide">
+												<img src="img/blog4.jpg" alt="video">
+											</div>
+
+										</div>
+
+									</div>
+
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+
+							<p class="weight-bold c-secondary">Odio morbi quis commodo odio aenean sed. Proin sagittis nisl
+								rhoncus mattis rhoncus urna neque viverra. Magna sit amet purus gravida quis blandit.
+								Ornare quam viverra orci sagittis eu. Purus viverra accumsan in nisl nisi scelerisque
+								eu ultrices. Non odio euismod lacinia at quis risus sed vulputate.
+							</p>
+							<p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
+								formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc
+								nobis videntur parum clari, fiant sollemnes in futurum. Nam liber tempor cum soluta nobis
+								eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum minim
+								veniam, quis nostrud nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+							</p>
+
+							<blockquote>
+								<p>Qel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+									feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+									luptatum zzril delenit augue.
+								</p>
+								<h6>
+									Philip Demarco
+									<span>founder of agency</span>
+								</h6>
+							</blockquote>
+
+							<p>In mollis nunc sed id semper risus in. Consequat mauris nunc congue nisi vitae suscipit.
+								Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Nulla aliquet
+								porttitor lacus luctus accumsan tortor posuere ac ut. Ipsum suspendisse ultrices gravida
+								dictum fusce ut placerat orci nulla. Cursus turpis massa tincidunt dui ut ornare lectus
+								sit. In aliquam sem fringilla ut morbi tincidunt. Non consectetur a erat nam at.
+								Sagittis aliquam malesuada bibendum arcu vitae elementum cura
+							</p>
+
+							<p>Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque.
+								Pharetra diam sit amet nisl suscipit. Ac odio tempor orci dapibus ultrices in. Nulla
+								facilisi cras fermentum odio eu. Fames ac turpis egestas integer eget aliquet nibh
+								praesent tristique. Leo integer malesuada nunc.
+							</p>
+
+							<div class="wp-caption alignleft">
+								<img src="img/blog23.jpg" alt="blog">
+							</div>
+
+							<h5>Investigationes demonstraverunt lectores legere me lius</h5>
+
+							<p>Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque.
+								Pharetra diam sit amet nisl suscipit. Ac odio tempor orci dapibus ultrices in. Nulla
+								facilisi cras fermentum odio eu. Fames ac turpis egestas integer eget aliquet nibh
+								praesent tristique. Leo integer malesuada nunc.
+							</p>
+
+							<p>In mollis nunc sed id semper risus in. Consequat mauris nunc congue nisi vitae suscipit.
+								Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Nulla aliquet
+								porttitor lacus luctus accumsan tortor posuere ac ut. Ipsum suspendisse ultrices gravida
+								dictum fusce ut placerat orci nulla. Cursus turpis massa tincidunt dui ut ornare lectus
+								sit. In aliquam sem fringilla ut morbi tincidunt. Non consectetur a erat nam at.
+								Sagittis aliquam malesuada bibendum arcu vitae elementum cura
+							</p>
+
+							<div class="wp-caption alignnone">
+								<img src="img/blog24.jpg" alt="blog">
+								<div class="wp-caption-text">In mollis nunc sed id semper risus in.<span> © photo by</span> <a href="#" class="link--with-decoration">Philip Demarco</a></div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+									<p>Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut.
+										Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla.
+										Cursus turpis massa tincidunt dui ut ornare lectus sit. In aliquam sem fringilla
+										ut morbi tincidunt. Non consectetur a erat nam at. Sagittis aliquam malesuada
+										bibendum arcu vitae elementum curabitur.
+									</p>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+									<p>Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque.
+										Pharetra diam sit amet nisl suscipit. Ac odio tempor orci dapibus ultrices in.
+										Nulla facilisi cras fermentum odio eu. Fames ac turpis egestas integer eget
+										aliquet nibh praesent tristique. Leo integer malesuada nunc.
+									</p>
+								</div>
+							</div>
+
+							<div class="wp-caption alignright">
+								<img src="img/blog25.jpg" alt="blog">
+							</div>
+
+							<h5>INVESTIGATIONES DEMONSTRAVERUNT LECTORES</h5>
+							<p>Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Pharetra diam
+								sit amet nisl suscipit. Ac odio tempor orci dapibus ultrices in. Nulla facilisi cras
+								fermentum odio eu. Fames ac turpis egestas integer eget aliquet nibh praesent tristique.
+								Leo integer malesuada nunc.
+							</p>
+
+							<p>Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Nulla aliquet
+								porttitor lacus luctus accumsan tortor posuere ac ut. Ipsum suspendisse ultrices
+								gravida dictum fusce ut placerat orci nulla. Cursus turpis massa tincidunt dui ut
+								ornare lectus sit. In aliquam sem fringilla ut morbi tincidunt. Non consectetur a
+								erat nam at. Sagittis aliquam malesuada bibendum.
+							</p>
+
+							<h5>Qectores legere me lius quod laritas est etiam processus</h5>
+
+							<p>Scelerisque fermentum dui faucibus in ornare. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Ornare massa eget egestas purus viverra accumsan in. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. A pellentesque sit amet porttitor eget dolor morbi. Diam quam nulla porttitor massa id neque aliquam vestibulum. Consequat mauris nunc congue nisi vitae suscipit.
+							</p>
+
+							<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum minim veniam, quis nostrud nostrud exerci tation.</p>
+
+							<ul>
+								<li>
+									<strong>Nam liber tempor cum soluta nobis eleifend option. </strong>Congue nihil imperdiet doming id quod mazim placerat facer possim assum minim veniam, quis nostrud nostrud exerci tation.
+								</li>
+								<li>
+									<strong>Non curabitur gravida arcu ac tortor dignissim convallis eu consequat ac felis donec.</strong>
+								</li>
+								<li>
+									<strong>Fames ac turpis egestas maecenas. </strong>Dignissim cras tincidunt lobortis feugiat vivamus at. Massa eget egestas purus viverra accumsan iaculis at erat pellentesque adipiscing.
+								</li>
+							</ul>
+
+							<p>In mollis nunc sed id semper risus in. Consequat mauris nunc congue nisi vitae suscipit. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Cursus turpis massa tincidunt dui ut ornare lectus sit. In aliquam sem fringilla ut morbi tincidunt.
+							</p>
+							<p>Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Pharetra diam sit amet nisl suscipit. Ac odio tempor orci dapibus ultrices in. Nulla facilisi cras fermentum odio eu.
+							</p>
+							<div class="post-details-shared">
+								<hr class="divider divider--style10">
+
+								<ul class="widget w--category-links category--with-title">
+									<li>
+										Tags
+									</li>
+									<li>
+										<svg class="woox-icon icon-hash-key"><use xlink:href="svg-icons/sprites/icons.svg#icon-hash-key"></use></svg>
+									</li>
+									<li>
+										<a href="#" class="link--with-decoration">user interface</a>
+									</li>
+									<li>
+										<a href="#" class="link--with-decoration">app</a>
+									</li>
+									<li>
+										<a href="#" class="link--with-decoration">sketch</a>
+									</li>
+									<li>
+										<a href="#" class="link--with-decoration">photoshop</a>
+									</li>
+									<li>
+										<a href="#" class="link--with-decoration">wordpress</a>
+									</li>
+								</ul>
+
+								<ul class="socials socials--small socials--colored socials--with-title">
+									<li>Share</li>
+
+									<li class="c-facebook">
+										<a href="#">
+											<svg class="woox-icon icon-facebook-circular-logo"><use xlink:href="svg-icons/sprites/icons.svg#icon-facebook-circular-logo"></use></svg>
+										</a>
+									</li>
+
+									<li class="c-twitter">
+										<a href="#">
+											<svg class="woox-icon icon-twitter-circular-logo"><use xlink:href="svg-icons/sprites/icons.svg#icon-twitter-circular-logo"></use></svg>
+										</a>
+									</li>
+
+									<li class="c-pinterest">
+										<a href="#">
+											<svg class="woox-icon icon-pinterest-circular-logo-symbol"><use xlink:href="svg-icons/sprites/icons.svg#icon-pinterest-circular-logo-symbol"></use></svg>
+										</a>
+									</li>
+
+								</ul>
+
+							</div>
+						</div>
+					</article>
+
+					<div class="blog-details-author">
+						<div class="author-block">
+							<img class="avatar" src="img/author8.jpg" alt="avatar">
+						</div>
+
+						<div class="author-details">
+
+							<div class="author-content-wrap">
+								<div class="author-content">
+									<div class="author-prof">posted by</div>
+									<a href="#" class="h6 author-name">Philip Demarco</a>
+								</div>
+								<a href="#" class="btn btn--small btn--transparent btn--grey-light btn--with-icon btn---icon-left">
+									<i class="woox-icon fas fa-envelope"></i>
+									send a message
+								</a>
+							</div>
+
+							<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum minim veniam, quis nostrud nostrud.
+							</p>
+
+							<ul class="socials socials--double-icons">
+								<li>
+									<a href="#">
+										<i class="fab fa-twitter woox-icon"></i>
+										<i class="fab fa-twitter woox-icon hover"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="fab fa-dribbble woox-icon"></i>
+										<i class="fab fa-dribbble woox-icon hover"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="fab fa-instagram woox-icon"></i>
+										<i class="fab fa-instagram woox-icon hover"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="fab fa-linkedin-in woox-icon"></i>
+										<i class="fab fa-linkedin-in woox-icon hover"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="fab fa-facebook-square woox-icon"></i>
+										<i class="fab fa-facebook-square woox-icon hover"></i>
+									</a>
+								</li>
+							</ul>
+
+						</div>
+
+					</div>
+
+					<div class="navigation navigation--arrow">
+
+						<a href="#" class="btn btn--medium btn--secondary btn--transparent btn--hover-decoration btn--with-icon btn---icon-left">
+							<svg class="woox-icon icon-arrow-left"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-left"></use></svg>
+							prev post
+						</a>
+
+						<a href="#" class="btn btn--round btn--secondary btn--transparent btn--hover-decoration">
+							<i class="fas fa-ellipsis-h woox-icon"></i>
+						</a>
+
+						<a href="#" class="btn btn--medium btn--secondary btn--transparent btn--hover-decoration btn--with-icon btn--icon-right">next post
+							<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+						</a>
+
+					</div>
+
+					<div class="comments-wrap">
+
+						<div class="comments">
+
+							<header class="crumina-module crumina-heading heading--h3 heading--with-decoration align-center">
+								<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+								<h4 class="heading-title">6 Comments</h4>
+							</header>
+
+							<ol class="comments__list">
+								<li class="comments__item">
+
+									<div class="comment-entry comment comments__article">
+
+										<div class="comments__avatar">
+											<img src="img/author2.jpg" alt="avatar">
+											<a href="#" class="link--with-decoration reply">Reply</a>
+										</div>
+
+
+										<div class="comments__body">
+
+											<div class="d-flex--content-inline">
+
+												<header class="comment-meta comments__header">
+
+													<cite class="fn url comments__author">
+														<a href="#" rel="external">Philip Demarco</a>
+													</cite>
+
+													<div class="comments__time">
+														<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+													</div>
+
+												</header>
+											</div>
+
+											<div class="comment-content comment">
+												<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+													Claritas est etiam processus dynamicus, qui sequitur mutationem
+													consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc
+													putamus parum claram, anteposuerit litterarum formas humanitatis per seacula qui mutationem consuetudium.
+												</p>
+											</div>
+
+										</div>
+
+									</div>
+
+									<ol class="children">
+										<li class="comments__item">
+
+											<div class="comment-entry comment comments__article">
+
+												<div class="comments__avatar">
+													<img src="img/author3.jpg" alt="avatar">
+													<a href="#" class="link--with-decoration reply">Reply</a>
+												</div>
+
+
+												<div class="comments__body">
+
+													<div class="d-flex--content-inline">
+
+														<header class="comment-meta comments__header">
+
+															<cite class="fn url comments__author">
+																<a href="#" rel="external">Angelina Johnson</a>
+															</cite>
+
+															<div class="comments__time">
+																<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+															</div>
+
+														</header>
+													</div>
+
+													<div class="comment-content comment">
+														<p>Mirum est notare quam littera gothica, quam nunc putamus parum.</p>
+													</div>
+
+												</div>
+
+											</div>
+										</li>
+										<li class="comments__item">
+
+											<div class="comment-entry comment comments__article">
+
+												<div class="comments__avatar">
+													<img src="img/author5.jpg" alt="avatar">
+													<a href="#" class="link--with-decoration reply">Reply</a>
+												</div>
+
+
+												<div class="comments__body">
+
+													<div class="d-flex--content-inline">
+
+														<header class="comment-meta comments__header">
+
+															<cite class="fn url comments__author">
+																<a href="#" rel="external">Peter Spenser</a>
+															</cite>
+
+															<div class="comments__time">
+																<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+															</div>
+
+														</header>
+													</div>
+
+													<div class="comment-content comment">
+														<p>Claritas est etiam processus dynamicus, qui sequitur mutationem
+															consuetudium lectorum. Mirum est notare quam littera gothica, quam
+															nunc putamus parum claram, anteposuerit litterarum formas humanitatis.
+														</p>
+													</div>
+
+												</div>
+
+											</div>
+
+											<ol class="children">
+												<li class="comments__item">
+
+													<div class="comment-entry comment comments__article">
+
+														<div class="comments__avatar">
+															<img src="img/author2.jpg" alt="avatar">
+															<a href="#" class="link--with-decoration reply">Reply</a>
+														</div>
+
+
+														<div class="comments__body">
+
+															<div class="d-flex--content-inline">
+
+																<header class="comment-meta comments__header">
+
+																	<cite class="fn url comments__author">
+																		<a href="#" rel="external">Philip Demarco</a>
+																	</cite>
+
+																	<div class="comments__time">
+																		<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+																	</div>
+
+																</header>
+															</div>
+
+															<div class="comment-content comment">
+																<p>Investigationes demonstraverunt lectores legere me lius quod
+																	ii legunt saepius. Claritas est etiam processus dynamicus,
+																	qui sequitur mutationem consuetudium lectorum. Mirum est notare
+																	quam littera gothica, quam nunc putamus parum claram, anteposuerit
+																	litterarum formas humanitatis per seacula.
+																</p>
+															</div>
+
+														</div>
+
+													</div>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li class="comments__item">
+
+									<div class="comment-entry comment comments__article">
+
+										<div class="comments__avatar">
+											<img src="img/author6.jpg" alt="avatar">
+											<a href="#" class="link--with-decoration reply">Reply</a>
+										</div>
+
+
+										<div class="comments__body">
+
+											<div class="d-flex--content-inline">
+
+												<header class="comment-meta comments__header">
+
+													<cite class="fn url comments__author">
+														<a href="#" rel="external">Frank Godman</a>
+													</cite>
+
+													<div class="comments__time">
+														<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+													</div>
+
+												</header>
+											</div>
+
+											<div class="comment-content comment">
+												<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+													Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+													Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
+													formas humanitatis per seacula qui mutationem consuetudium.
+												</p>
+											</div>
+
+										</div>
+
+									</div>
+
+									<ol class="children">
+										<li class="comments__item">
+
+											<div class="comment-entry comment comments__article">
+
+												<div class="comments__avatar">
+													<img src="img/author7.jpg" alt="avatar">
+													<a href="#" class="link--with-decoration reply">Reply</a>
+												</div>
+
+
+												<div class="comments__body">
+
+													<div class="d-flex--content-inline">
+
+														<header class="comment-meta comments__header">
+
+															<cite class="fn url comments__author">
+																<a href="#" rel="external">Britney Simpson</a>
+															</cite>
+
+															<div class="comments__time">
+																<time class="published" datetime="2018-03-14 12:36:00">March 14, 2018 at 12:36 pm</time>
+															</div>
+
+														</header>
+													</div>
+
+													<div class="comment-content comment">
+														<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+															Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis.
+														</p>
+													</div>
+
+												</div>
+
+											</div>
+										</li>
+									</ol>
+								</li>
+							</ol>
+
+						</div>
+
+						<header class="crumina-module crumina-heading heading--h3 heading--with-decoration align-center">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h4 class="heading-title">Share Your Thoughts</h4>
+						</header>
+
+						<form class="contact-form leave-reply-style2" method="post">
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+									<label for="name">Your name<abbr class="required" title="required">*</abbr></label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<div class="form-group">
+										<input id="name" class="form-control input--squared" type="text" value="Peter Spenser">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+									<label for="name">Your email<abbr class="required" title="required">*</abbr></label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<div class="form-group">
+										<input class="form-control input--squared" type="email" value="" placeholder="Your email address">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+									<label for="name">Website<abbr class="required" title="required">*</abbr></label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<div class="form-group">
+										<input class="form-control input--squared" type="text" value="" placeholder="http://">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+									<label for="name">Comment<abbr class="required" title="required">*</abbr></label>
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+									<div class="form-group">
+										<textarea class="form-control input--squared height-190" name="message" placeholder="Write your comment here"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+									<button class="btn btn--medium btn--primary">post a comment</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+				<!-- Blog post Details end ...-->
+
+				<!-- Sidebar LEFT -->
+				<div class="col-lg-4 col-lg-pull-8 col-md-12 col-sm-12 col-xs-12">
+					<aside aria-label="sidebar" class="sidebar sidebar-right">
+
+						<aside class="widget w-about">
+							<a href="index.html" class="site-logo">
+								<img src="img/logo-primary.png" alt="Woox">
+								<svg class="woox-icon" viewBox="0 0 481.448 101.996">							<path d="M152.514 14.926c0 2.1-1.339 4.593-2.1 7.081L126.3 89.366c-2.487 7.654-8.229 11.673-14.543 11.673-6.889 0-12.056-4.019-15.309-11.673L76.162 43.822 55.877 89.366c-3.253 7.654-8.994 11.673-15.309 11.673-6.7 0-12.056-4.019-14.543-11.673L2.1 22.007C1.148 19.519 0 17.031 0 14.926A14.213 14.213 0 0 1 14.352.574c5.358 0 11.1 3.062 12.821 8.037l15.5 49.18L62.575 9.76C65.063 3.827 69.655.574 76.162.574c6.7 0 11.29 3.253 13.778 9.186l19.71 48.031 15.692-49.18c1.531-4.593 7.271-8.037 12.821-8.037a14.212 14.212 0 0 1 14.351 14.352zM263.69 51.285c0 34.253-29.853 50.711-51.667 50.711-22.006 0-51.859-16.458-51.859-50.711C160.164 17.223 190.016 0 212.022 0c21.815 0 51.668 17.223 51.668 51.285zm-73.292 0c0 14.352 9.568 24.3 21.624 24.3 11.864 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.055 0-21.622 9.951-21.622 24.877zm190.974 0c0 34.253-29.853 50.715-51.672 50.715-22.006 0-51.858-16.458-51.858-50.711C277.845 17.223 307.7 0 329.7 0c21.819 0 51.672 17.223 51.672 51.285zm-73.291 0c0 14.352 9.567 24.3 21.623 24.3 11.865 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.056 0-21.623 9.951-21.623 24.877zm173.367 36.932c0 7.271-6.7 13.4-13.97 13.4-4.4 0-7.846-2.3-10.716-5.55l-21.05-24.686-21.05 24.686c-2.87 3.253-6.123 5.55-10.716 5.55-7.08 0-13.97-6.124-13.97-13.4a12.074 12.074 0 0 1 3.254-8.229l25.45-28.9-25.45-28.9a12.348 12.348 0 0 1-3.062-8.037c0-7.463 6.89-13.586 13.97-13.586a13.062 13.062 0 0 1 10.716 5.549L435.712 30.8l20.859-24.676c2.87-3.444 6.315-5.549 10.907-5.549 6.89 0 13.778 6.124 13.778 13.586a12.352 12.352 0 0 1-3.062 8.037l-25.451 28.9 25.451 28.9a11.252 11.252 0 0 1 3.254 8.219z" data-name="Слой 2"/>						</svg>
+							</a>
+							<p>Euismod nisi porta lorem mollis aliquam ut porttitor. Sit amet nisl purus in mollis nunc sed id semper.
+								Posuere ac ut consequat semper. Id ornare arcu odio ut. Nunc aliquet bibendum enim facilisis
+								gravida neque convallis a cras. Sagittis aliquam malesuada.
+							</p>
+
+							<a href="index.html" class="link--with-decoration">
+								read more
+							</a>
+						</aside>
+
+						<aside class="widget w-search">
+							<form method="get" class="form--search">
+								<div class="input-with-icon">
+									<input name="name" placeholder="Search" type="text">
+									<i class="woox-icon fas fa-search"></i>
+								</div>
+							</form>
+						</aside>
+
+						<aside class="widget w-category">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Post category</h5>
+							<ul class="post-category-list">
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Fashion
+										<span class="cat-count">8 367</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Food
+										<span class="cat-count">2 003</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Interviews
+										<span class="cat-count">605</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Lifestyle
+										<span class="cat-count">107</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Personal
+										<span class="cat-count">82</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Photography
+										<span class="cat-count">30</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="icons">
+											<svg class="woox-icon icon-arrow-right"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+											<svg class="woox-icon icon-arrow-right-line icon-hover"><use xlink:href="svg-icons/sprites/icons.svg#icon-arrow-right-line"></use></svg>
+										</div>
+										Travel
+										<span class="cat-count">6</span>
+									</a>
+								</li>
+							</ul>
+						</aside>
+
+						<aside class="widget w-subscribe">
+							<form method="post" action="send_mail.php">
+								<h4 class="title">Subscribe</h4>
+								<p>Subscribe now to get notified about exclusive offers from Woox every week!</p>
+
+								<input type="email" value="" placeholder="Your E-mail Address">
+
+								<button class="btn btn--medium btn--secondary full-width">subscribe now!</button>
+
+								<p>Don't worry, we don't spam!</p>
+							</form>
+						</aside>
+
+						<aside class="widget w-latest-news">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Recent posts</h5>
+							<ul class="latest-news-list">
+								<li>
+									<article itemscope="" itemtype="http://schema.org/NewsArticle" class="latest-news-item">
+
+										<a href="#" class="category">category</a>
+
+										<a href="#" class="h6 post__title entry-title">Sed sed risus pretium quam vulputate dignissim morbi tincidunt ornare massa</a>
+
+										<div class="post-comments-date-wrap">
+											<div class="post__date">
+												<time class="published" datetime="2018-03-24 12:00:00">
+													Mar 24, 2018
+												</time>
+											</div>
+											<div class="post__comments">
+												<a href="#">8 Comments</a>
+											</div>
+										</div>
+
+									</article>
+								</li>
+								<li>
+									<hr class="divider divider--style10">
+									<article itemscope="" itemtype="http://schema.org/NewsArticle" class="latest-news-item">
+
+										<a href="#" class="category">category</a>
+
+										<a href="#" class="h6 post__title entry-title">Quam vulputate dignissim morbi</a>
+
+										<div class="post-comments-date-wrap">
+											<div class="post__date">
+												<time class="published" datetime="2018-03-20 12:00:00">
+													Mar 20, 2018
+												</time>
+											</div>
+											<div class="post__comments">
+												<a href="#">1 Comments</a>
+											</div>
+										</div>
+
+									</article>
+								</li>
+								<li>
+									<hr class="divider divider--style10">
+									<article itemscope="" itemtype="http://schema.org/NewsArticle" class="latest-news-item">
+
+										<a href="#" class="category">category</a>
+
+										<a href="#" class="h6 post__title entry-title">Massa placerat duis ultricies lacus
+											sed turpis tincidunt id aliquet ut faucibus pulvinar elementum integer enim
+										</a>
+
+										<div class="post-comments-date-wrap">
+											<div class="post__date">
+												<time class="published" datetime="2018-03-06 12:00:00">
+													Mar 6, 2018
+												</time>
+											</div>
+											<div class="post__comments">
+												<a href="#">0 Comments</a>
+											</div>
+										</div>
+
+									</article>
+								</li>
+							</ul>
+						</aside>
+
+						<aside class="widget w-popular-products crumina-module crumina-module-slider pagination-bottom-center">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Featured posts</h5>
+							<div class="swiper-container">
+
+								<div class="swiper-wrapper">
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail sticky">
+
+											<div class="post-thumb">
+												<img src="img/blog7.jpg" alt="post">
+												<div class="overlay overlay-blog"></div>
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h5 post__title entry-title">Facilisi nullam ipsum a arcu cursus vitae congue integer enim neque ac</a>
+
+													<div class="post-additional-info">
+
+														<div class="post-comments-date-wrap">
+															<div class="post__date">
+																<time class="published" datetime="2018-02-03 12:00:00">
+																	Feb 03, 2018
+																</time>
+															</div>
+														</div>
+
+														<div class="author-block author vcard">
+															<img class="avatar" src="img/author5.jpg" alt="avatar">
+															<div class="author-content">
+																<div class="author-prof">posted by</div>
+																<a href="#" class="author-name fn">Frank Godman</a>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</article>
+									</div>
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail sticky">
+
+											<div class="post-thumb">
+												<img src="img/blog7.jpg" alt="post">
+												<div class="overlay overlay-blog"></div>
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h5 post__title entry-title">Facilisi nullam ipsum a arcu cursus vitae congue integer enim neque ac</a>
+
+													<div class="post-additional-info">
+
+														<div class="post-comments-date-wrap">
+															<div class="post__date">
+																<time class="published" datetime="2018-02-03 12:00:00">
+																	Feb 03, 2018
+																</time>
+															</div>
+														</div>
+
+														<div class="author-block author vcard">
+															<img class="avatar" src="img/author5.jpg" alt="avatar">
+															<div class="author-content">
+																<div class="author-prof">posted by</div>
+																<a href="#" class="author-name fn">Frank Godman</a>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</article>
+									</div>
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail sticky">
+
+											<div class="post-thumb">
+												<img src="img/blog7.jpg" alt="post">
+												<div class="overlay overlay-blog"></div>
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h5 post__title entry-title">Facilisi nullam ipsum a arcu cursus vitae congue integer enim neque ac</a>
+
+													<div class="post-additional-info">
+
+														<div class="post-comments-date-wrap">
+															<div class="post__date">
+																<time class="published" datetime="2018-02-03 12:00:00">
+																	Feb 03, 2018
+																</time>
+															</div>
+														</div>
+
+														<div class="author-block author vcard">
+															<img class="avatar" src="img/author5.jpg" alt="avatar">
+															<div class="author-content">
+																<div class="author-prof">posted by</div>
+																<a href="#" class="author-name fn">Frank Godman</a>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</article>
+									</div>
+								</div>
+							</div>
+
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						</aside>
+
+						<aside class="widget w-recent-comments">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Recent comments</h5>
+							<ul class="recent-comments-list">
+								<li>
+									<div class="avatar">
+										<svg class="woox-icon icon-black-male-user-symbol-2"><use xlink:href="svg-icons/sprites/icons.svg#icon-black-male-user-symbol-2"></use></svg>
+									</div>
+									<div class="content">
+										<a href="#">Angelina Johnson</a>
+										Sed sed risus pretium quam vulputate dignissim morbi
+									</div>
+									<hr class="divider divider--style10">
+								</li>
+
+								<li>
+									<div class="avatar">
+										<svg class="woox-icon icon-black-male-user-symbol-2"><use xlink:href="svg-icons/sprites/icons.svg#icon-black-male-user-symbol-2"></use></svg>
+									</div>
+									<div class="content">
+										<a href="#">Philip Demarco</a>
+										Viverra nam libero justo laoreet sit amet cursus sit non arcu risus quis varius nibh mauris cursus
+									</div>
+									<hr class="divider divider--style10">
+								</li>
+
+								<li>
+									<div class="avatar">
+										<svg class="woox-icon icon-black-male-user-symbol-2"><use xlink:href="svg-icons/sprites/icons.svg#icon-black-male-user-symbol-2"></use></svg>
+									</div>
+									<div class="content">
+										<a href="#">Admin</a>
+										Egestas maecenas pharetra convallis posuere morbi leo urna
+									</div>
+								</li>
+							</ul>
+						</aside>
+
+						<aside class="widget w-banner">
+							<a href="#" class="w-banner-thumb">
+								<img src="img/w-banner.png" alt="banner">
+								<div class="banner-content">
+									<div class="banner-sup-title">ad</div>
+									<div class="banner-title">banner</div>
+								</div>
+								<div class="banner-size">336 × 280 px</div>
+							</a>
+							<div class="sponsor">sponsor</div>
+						</aside>
+
+						<aside class="widget w-socials-counter">
+							<div class="social-counter-item">
+								<img class="woox-icon" src="svg-icons/twitter.svg" alt="twitter">
+								<div class="counter">6.3k</div>
+								<div class="descr">Follow</div>
+							</div>
+							<div class="social-counter-item">
+								<img class="woox-icon" src="svg-icons/google.svg" alt="google">
+								<div class="counter">982</div>
+								<div class="descr">Like</div>
+							</div>
+							<div class="social-counter-item">
+								<img class="woox-icon" src="svg-icons/circle-facebook.svg" alt="facebook">
+								<div class="counter">5.8K</div>
+								<div class="descr">Follow</div>
+							</div>
+						</aside>
+
+						<aside class="widget w-popular-posts crumina-module crumina-module-slider pagination-bottom-center">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Most popular posts</h5>
+							<div class="swiper-container">
+
+								<div class="swiper-wrapper">
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail">
+
+											<div class="post-thumb">
+												<img src="img/blog8.jpg" alt="post">
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h6 post__title entry-title">Sed sed risus pretium quam vulputate dignissim</a>
+
+													<div class="post-additional-info">
+														<div class="post-comments-date-wrap">
+
+															<div class="post__author-name fn">
+																<a href="#" class="post__author-link">Admin</a>
+															</div>
+
+															<div class="post__date">
+																<time class="published" datetime="2018-03-06 12:00:00">
+																	Mar 06, 2018
+																</time>
+															</div>
+
+															<div class="post__comments">
+																<a href="#">0 Comments</a>
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<hr class="divider divider--style10">
+
+										</article>
+									</div>
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail">
+
+											<div class="post-thumb">
+												<img src="img/blog8.jpg" alt="post">
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h6 post__title entry-title">Sed sed risus pretium quam vulputate</a>
+
+													<div class="post-additional-info">
+														<div class="post-comments-date-wrap">
+
+															<div class="post__author-name fn">
+																<a href="#" class="post__author-link">Admin</a>
+															</div>
+
+															<div class="post__date">
+																<time class="published" datetime="2018-03-06 12:00:00">
+																	Mar 06, 2018
+																</time>
+															</div>
+
+															<div class="post__comments">
+																<a href="#">0 Comments</a>
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<hr class="divider divider--style10">
+
+										</article>
+									</div>
+
+									<div class="swiper-slide">
+										<article class="hentry post post-standard has-post-thumbnail">
+
+											<div class="post-thumb">
+												<img src="img/blog8.jpg" alt="post">
+											</div>
+
+											<div class="post__content">
+
+												<div class="post__content-info">
+
+													<a href="#" class="category">category</a>
+
+													<a href="#" class="h6 post__title entry-title">Sed sed risus pretium quam vulputate</a>
+
+													<div class="post-additional-info">
+														<div class="post-comments-date-wrap">
+
+															<div class="post__author-name fn">
+																<a href="#" class="post__author-link">Admin</a>
+															</div>
+
+															<div class="post__date">
+																<time class="published" datetime="2018-03-06 12:00:00">
+																	Mar 06, 2018
+																</time>
+															</div>
+
+															<div class="post__comments">
+																<a href="#">0 Comments</a>
+															</div>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<hr class="divider divider--style10">
+
+										</article>
+									</div>
+								</div>
+							</div>
+
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+
+						</aside>
+
+						<aside class="widget w-shared-posts">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Most shared posts</h5>
+							<ul class="list-shared-post">
+								<li>
+									<article class="hentry post-shared">
+										<div class="post-thumb">
+											<img src="img/shared-post1.jpg" alt="post">
+										</div>
+										<div class="post__content">
+											<a href="#" class="category">category</a>
+											<a href="#" class="h6 post__title entry-title">Sed sed risus pretium quam vulputate dignissim</a>
+											<div class="share-counter">283 Shares</div>
+										</div>
+									</article>
+									<hr class="divider divider--style10">
+								</li>
+								<li>
+									<article class="hentry post-shared">
+										<div class="post-thumb">
+											<img src="img/shared-post2.jpg" alt="post">
+										</div>
+										<div class="post__content">
+											<a href="#" class="category">category</a>
+											<a href="#" class="h6 post__title entry-title">Convallis posuere morbi leo</a>
+											<div class="share-counter">96 Shares</div>
+										</div>
+									</article>
+									<hr class="divider divider--style10">
+								</li>
+								<li>
+									<article class="hentry post-shared">
+										<div class="post-thumb">
+											<img src="img/shared-post3.jpg" alt="post">
+										</div>
+										<div class="post__content">
+											<a href="#" class="category">category</a>
+											<a href="#" class="h6 post__title entry-title">Ultrices tincidunt arcu non sodales neque</a>
+											<div class="share-counter">37 Shares</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+						</aside>
+
+						<aside class="widget w-calendar">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Calendar</h5>
+							<input class="standard-datetimepicker" type="text">
+						</aside>
+
+						<aside class="widget w-popular-tags">
+							<svg class="woox-icon icon-wave wave-line"><use xlink:href="svg-icons/sprites/icons.svg#icon-wave"></use></svg>
+							<h5 class="widget-title">Popular tags</h5>
+							<ul class="tags-list">
+								<li>
+									<a href="#">envato</a>
+								</li>
+								<li>
+									<a href="#">envato elements</a>
+								</li>
+								<li>
+									<a href="#">marketplace</a>
+								</li>
+								<li>
+									<a href="#">wp theme</a>
+								</li>
+								<li>
+									<a href="#">wp</a>
+								</li>
+								<li>
+									<a href="#">psd</a>
+								</li>
+								<li>
+									<a href="#">themeforest</a>
+								</li>
+							</ul>
+						</aside>
+
+						<aside class="widget w-socials-subscriber">
+							<ul class="list-socials-subscriber">
+								<li class="subscriber-item bg-facebook">
+									<i class="woox-icon fab fa-facebook-square"></i>
+									<div class="subscriber-count">982<span>Likes</span></div>
+									<a href="#" class="join-follow">Like</a>
+								</li>
+								<li class="subscriber-item bg-twitter">
+									<i class="woox-icon fab fa-twitter"></i>
+									<div class="subscriber-count">6.3k<span>Followers</span></div>
+									<a href="#" class="join-follow">Follow</a>
+								</li>
+								<li class="subscriber-item bg-instagram">
+									<i class="woox-icon fab fa-instagram"></i>
+									<div class="subscriber-count">5.8k<span>Followers</span></div>
+									<a href="#" class="join-follow">Follow</a>
+								</li>
+								<li class="subscriber-item bg-googleplus">
+									<i class="woox-icon fab fa-google-plus-g"></i>
+									<div class="subscriber-count">260<span>Fans</span></div>
+									<a href="#" class="join-follow">Like</a>
+								</li>
+							</ul>
+						</aside>
+
+
+					</aside>
+				</div>
+				<!-- End Sidebar LEFT -->
+
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row pb80">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="promo-block">
+						<div class="promo-content">
+							<div class="promo-title">Need a high quality <b>web design</b> or <b>interface design</b>?</div>
+							<div class="promo-text">Investigationes demonstraverunt lectores legere.</div>
+						</div>
+						<a href="#" class="btn btn--medium btn--secondary btn--transparent btn--hover-decoration">contact us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+
+<!-- Footer -->
+
+<footer id="site-footer" class="footer crumina-parallax-background">
+	<div class="scene">
+		<div data-depth="0.2" class="layer first-layer"></div>
+		<div data-depth="0.6" class="layer second-layer"></div>
+		<div data-depth="1" class="layer third-layer"></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+				<div class="widget w-info">
+					<a href="index.html" class="site-logo">
+						<img src="img/logo-primary.png" alt="Woox">
+						<svg class="woox-icon" viewBox="0 0 481.448 101.996">							<path d="M152.514 14.926c0 2.1-1.339 4.593-2.1 7.081L126.3 89.366c-2.487 7.654-8.229 11.673-14.543 11.673-6.889 0-12.056-4.019-15.309-11.673L76.162 43.822 55.877 89.366c-3.253 7.654-8.994 11.673-15.309 11.673-6.7 0-12.056-4.019-14.543-11.673L2.1 22.007C1.148 19.519 0 17.031 0 14.926A14.213 14.213 0 0 1 14.352.574c5.358 0 11.1 3.062 12.821 8.037l15.5 49.18L62.575 9.76C65.063 3.827 69.655.574 76.162.574c6.7 0 11.29 3.253 13.778 9.186l19.71 48.031 15.692-49.18c1.531-4.593 7.271-8.037 12.821-8.037a14.212 14.212 0 0 1 14.351 14.352zM263.69 51.285c0 34.253-29.853 50.711-51.667 50.711-22.006 0-51.859-16.458-51.859-50.711C160.164 17.223 190.016 0 212.022 0c21.815 0 51.668 17.223 51.668 51.285zm-73.292 0c0 14.352 9.568 24.3 21.624 24.3 11.864 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.055 0-21.622 9.951-21.622 24.877zm190.974 0c0 34.253-29.853 50.715-51.672 50.715-22.006 0-51.858-16.458-51.858-50.711C277.845 17.223 307.7 0 329.7 0c21.819 0 51.672 17.223 51.672 51.285zm-73.291 0c0 14.352 9.567 24.3 21.623 24.3 11.865 0 21.624-9.951 21.624-24.3 0-14.926-9.759-24.877-21.624-24.877-12.056 0-21.623 9.951-21.623 24.877zm173.367 36.932c0 7.271-6.7 13.4-13.97 13.4-4.4 0-7.846-2.3-10.716-5.55l-21.05-24.686-21.05 24.686c-2.87 3.253-6.123 5.55-10.716 5.55-7.08 0-13.97-6.124-13.97-13.4a12.074 12.074 0 0 1 3.254-8.229l25.45-28.9-25.45-28.9a12.348 12.348 0 0 1-3.062-8.037c0-7.463 6.89-13.586 13.97-13.586a13.062 13.062 0 0 1 10.716 5.549L435.712 30.8l20.859-24.676c2.87-3.444 6.315-5.549 10.907-5.549 6.89 0 13.778 6.124 13.778 13.586a12.352 12.352 0 0 1-3.062 8.037l-25.451 28.9 25.451 28.9a11.252 11.252 0 0 1 3.254 8.219z" data-name="Слой 2"/>						</svg>
+					</a>
+					<p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit
+						litterarum formas humanitatis.
+					</p>
+				</div>
+
+			</div>
+			<div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+				<div class="widget w-contacts">
+					<ul class="socials">
+						<li>
+							<a href="#">
+								<i class="fab fa-twitter woox-icon"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fab fa-dribbble woox-icon"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fab fa-instagram woox-icon"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fab fa-linkedin-in woox-icon"></i>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fab fa-facebook-square woox-icon"></i>
+							</a>
+						</li>
+					</ul>
+
+					<div class="send-us">Send us a question <a href="#" class="link--with-decoration">support@woox.com</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<hr class="divider divider--style16">
+
+					<div class="copyright-wrapper">
+						<a class="back-to-top" href="#">
+							<svg class="woox-icon icon-top-arrow"><use xlink:href="svg-icons/sprites/icons.svg#icon-top-arrow"></use></svg>
+						</a>
+
+						<div>
+							<span>© All right reserved 2018.</span>
+							<span><a href="index.html">The Woox</a> - Creative Agency Website PSD Template.</span>
+						</div>
+
+						<div>
+							<div class="logo-design">
+								<img src="img/logo-fire.png" alt="ThemeFire">
+								<div class="design-wrap">
+									<div class="sup-title">designed by</div>
+									<a href="https://themeforest.net/user/themefire/portfolio" class="logo-title">themefire</a>
+								</div>
+							</div>
+
+							<div class="logo-design logo-design-crumina">
+								<img src="img/crumina-logo.png" alt="Crumina">
+								<div class="design-wrap">
+									<div class="sup-title">developed by</div>
+									<a href="https://crumina.net/" class="logo-title">Crumina</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- ... end Footer -->
+
+
+<script src="js/method-assign.js"></script>
+
+<!-- jQuery first, then Other JS. -->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script src="js/theme-plugins.js"></script>
+
+<script src="js/js-plugins/isotope.pkgd.min.js"></script>
+<script src="js/js-plugins/ajax-pagination.js"></script>
+<script src="js/js-plugins/swiper.min.js"></script>
+<script src="js/js-plugins/material.min.js"></script>
+
+<script src="js/js-plugins/bootstrap-datepicker.js"></script><!-- FontAwesome 5.x.x JS -->
+
+<script defer src="fonts/fontawesome-all.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>

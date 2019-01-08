@@ -1,0 +1,59 @@
+/*------------- #CASE DETAILS --------------*/
+
+
+.case-details-thumb {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  display: inline-block;
+
+  &:hover {
+	.like-block {
+	  opacity: 1;
+	}
+  }
+
+  img {
+	display: block;
+  }
+
+  .like-block {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	opacity: 0;
+  }
+}
+
+.case-additional-info {
+  & > * {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 40px;
+
+	&:last-child {
+	  margin-right: 0;
+	}
+  }
+
+  .title {
+	font-weight: $h-font-weight;
+	color: $heading-color;
+	margin-bottom: 5px;
+
+	& + * {
+	  margin-top: 10px;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .case-details-thumb .like-block {
+	bottom: 20px;
+	right: 20px;
+  }
+}

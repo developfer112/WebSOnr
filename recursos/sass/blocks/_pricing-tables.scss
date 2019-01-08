@@ -1,0 +1,545 @@
+/*------------- #PRICING TABLES --------------*/
+
+
+.crumina-pricing-table {
+  text-align: center;
+  transition: all .3s ease;
+  position: relative;
+  padding: 50px;
+
+  .pricing-title {
+    margin-bottom: 25px;
+	transition: all .3s ease;
+  }
+
+  .price {
+    position: relative;
+    font-size: 120px;
+	line-height: 1;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: $h-font-weight;
+
+    .price-value {
+      font-size: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+	.currency {
+	  transition: all .3s ease;
+	}
+  }
+
+  .btn {
+	width: 100%;
+  }
+
+  .pricing-tables-position {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 0;
+
+    li {
+      padding: 9px 0;
+      border-bottom: 1px solid;
+      font-weight: 400;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      strong {
+        font-weight: $h-font-weight;
+		color: $secondary-color;
+      }
+
+	  em {
+		font-style: normal;
+		font-weight: $h-font-weight;
+	  }
+    }
+  }
+
+  &.popular-pricing {
+	&:after {
+	  content: 'POPULAR';
+	  display: block;
+	  font-size: 12px;
+	  color: $white-color;
+	  letter-spacing: 4px;
+	  line-height: 1;
+	  font-weight: $h-font-weight;
+	  background-color: $red;
+	  border-radius: 30px;
+	  padding: 9px 25px;
+	  text-align: center;
+	  position: absolute;
+	  top: -15px;
+	  left: 50%;
+	  transform: translate(-50%, 0);
+	}
+  }
+}
+
+.pricing-table--style1 {
+  background-color: $white-color;
+  border: 4px solid transparent;
+  box-shadow: inset 4px 5px 0 0 transparent, 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+  border-radius: 30px;
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: transparent;
+    box-shadow: inset 4px 5px 0 0 $primary-color, 4px 5px 0 0 $primary-color;
+  }
+
+  .price {
+	color: $primary-color;
+  }
+
+  .price-value {
+	color: $secondary-color;
+  }
+
+  .pricing-tables-position {
+
+    li {
+      border-bottom: 1px solid $grey-light;
+
+	  em {
+		color: $yellow;
+	  }
+    }
+  }
+}
+
+
+/*------------- #PRICING Inline With Border --------------*/
+
+.pricing-tables-wrap .no-padding {
+  padding: 0 !important;
+}
+
+.pricing-tables-wrap {
+  border: 4px solid $grey-light;
+  border-radius: 30px;
+  width: 100%;
+  float: left;
+
+  & > * {
+	border-right: 4px solid $grey-light;
+
+	&:last-child {
+	  border-right-color: transparent;
+	}
+  }
+
+  .bg-layer {
+	box-shadow: 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+	background-color: transparent;
+	border-radius: 30px;
+	z-index: -1;
+	transition: all .3s ease;
+	opacity: 0;
+  }
+
+  .crumina-pricing-table {
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	min-height: 100%;
+
+	&:hover {
+	  z-index: 990;
+	  border-color: transparent;
+
+	  .bg-layer {
+		background-color: $white-color;
+		transform: translate3d(0, 0, 0) scale(1.1);
+		backface-visibility: hidden;
+		opacity: 1;
+	  }
+	}
+  }
+}
+
+
+/*------------- #PRICING STYLE2 --------------*/
+
+.pricing-table--style2 {
+  border-radius: 30px;
+
+  &:hover {
+	box-shadow: 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+  }
+
+  .pricing-title {
+	color: $white-color;
+  }
+
+  .currency {
+	color: rgba($white-color, .3);
+  }
+
+  .price-value {
+	color: $white-color;
+  }
+
+  .pricing-tables-position li {
+	border-color: rgba($white-color, .3);
+	color: $white-color;
+
+	em {
+	  color: $secondary-color;
+	}
+  }
+
+  &.bg-primary-color {
+	.pricing-title {
+	  color: $secondary-color;
+	}
+
+	.pricing-tables-position li {
+	  border-color: rgba($secondary-color, .1);
+	  color: $body-font-color;
+	}
+
+	.currency {
+	  color: $white-color;
+	}
+
+	.price-value {
+	  color: $secondary-color;
+	}
+  }
+
+  &.bg-secondary-color {
+	.pricing-tables-position li {
+	  color: $grey;
+
+	  strong, em {
+		color: $primary-color;
+	  }
+	}
+  }
+
+  &.bg-grey {
+	.price-value {
+	  color: $secondary-color;
+	}
+
+	.pricing-tables-position li {
+	  color: $body-font-color;
+	}
+  }
+
+  &.bg-dark-light {
+	.pricing-tables-position li {
+	  color: $grey;
+
+	  strong, em {
+		color: $white-color;
+	  }
+	}
+  }
+}
+
+
+/*------------- #PRICING Solid --------------*/
+
+.pricing-tables-wrap-solid .no-padding {
+  padding: 0 !important;
+}
+
+.pricing-tables-wrap-solid {
+  border-radius: 30px;
+  width: 100%;
+  float: left;
+
+  .bg-layer {
+	box-shadow: 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+	background-color: inherit;
+	border-radius: 30px;
+	z-index: -1;
+	transition: all .3s ease;
+	opacity: 0;
+  }
+
+  .crumina-pricing-table {
+	box-shadow: none;
+	border-radius: 0;
+	min-height: 100%;
+
+	&:hover {
+	  z-index: 990;
+
+	  .bg-layer {
+		transform: translate3d(0, 0, 0) scale(1.1);
+		backface-visibility: hidden;
+		opacity: 1;
+	  }
+	}
+  }
+
+  & > * {
+
+	&:first-child {
+
+	  .crumina-pricing-table {
+		border-radius: 30px 0 0 30px;
+	  }
+	}
+
+	&:last-child {
+
+	  .crumina-pricing-table {
+		border-radius: 0 30px 30px 0;
+	  }
+	}
+  }
+}
+
+
+/*------------- #PRICING Style3 --------------*/
+
+.pricing-table--style3 {
+  padding: 0 40px 40px;
+  border: 4px solid transparent;
+  background-color: $white-color;
+  box-shadow: 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+  border-radius: 50px;
+  margin-top: 70px;
+
+  &:hover {
+	.pricing-thumb {
+	  background-color: $primary-color;
+	}
+
+	.currency {
+	  color: $primary-color;
+	}
+  }
+
+  .pricing-thumb {
+	position: relative;
+	width: 160px;
+	height: 160px;
+	line-height: 160px;
+	border-radius: 100%;
+	margin: -70px auto 30px;
+	background-color: $info-box-thumb-bg;
+	transition: all .3s ease;
+
+	.woox-icon {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
+	  width: 80px;
+	  height: 80px;
+	}
+  }
+
+  .price {
+	margin-bottom: 40px;
+  }
+
+  .currency {
+	color: $grey-light;
+  }
+
+  .price-value {
+	color: $secondary-color;
+  }
+
+  .pricing-title {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+}
+
+
+/*------------- #PRICING Style4 --------------*/
+
+.pricing-table--style4 {
+  background-color: $white-color;
+  box-shadow: 60px 0 100px 5px rgba(61, 67, 79, 0.05);
+  border-radius: 50px;
+
+  &:hover {
+
+	.pricing-title {
+	  color: $primary-color;
+	}
+
+	.currency {
+	  color: $primary-color;
+	}
+
+	.pricing-description {
+	  visibility: visible;
+	  opacity: 1;
+	  overflow: visible;
+	  max-height: 600px;
+	  margin-bottom: 1.5em;
+	}
+  }
+
+  .pricing-title {
+	text-transform: uppercase;
+	width: 80%;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&:after {
+	  content: ".";
+	  font-size: inherit;
+	  color: $primary-color;
+	  display: inline-block;
+	  position: relative;
+	}
+  }
+
+  .pricing-thumb {
+	margin-bottom: 40px;
+  }
+
+  .pricing-description {
+	position: relative;
+	transition: all .3s ease;
+	visibility: hidden;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	margin-bottom: 0;
+  }
+
+  .price {
+	margin-bottom: 40px;
+  }
+
+  .currency {
+	color: $grey-light;
+  }
+
+  .price-value {
+	color: $secondary-color;
+  }
+}
+
+
+/*------------- #PRICING Tables Triple --------------*/
+
+.pricing-tables-triple-wrap {
+  & > * {
+
+	.crumina-pricing-table {
+	  border-radius: 0;
+	}
+
+	&:first-child {
+
+	  .crumina-pricing-table {
+		border-radius: 50px 0 0 50px;
+	  }
+	}
+
+	&:last-child {
+
+	  .crumina-pricing-table {
+		border-radius: 0 50px 50px 0;
+	  }
+	}
+  }
+
+  .bg-layer {
+	box-shadow: 15px 0 40px 5px rgba(61, 67, 79, 0.08);
+	background-color: transparent;
+	border-radius: 50px;
+	z-index: -1;
+	transition: all .3s ease;
+	opacity: 0;
+  }
+
+  .crumina-pricing-table {
+
+	&:hover {
+	  z-index: 990;
+
+	  .bg-layer {
+		background-color: $white-color;
+		transform: translate3d(0, 0, 0) scale(1.05);
+		backface-visibility: hidden;
+		opacity: 1;
+	  }
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1199px) {
+  .pricing-tables-wrap {
+	border-color: transparent;
+
+	& > * {
+	  border-right-color: transparent;
+	}
+
+	.crumina-pricing-table {
+	  border-radius: 50px;
+	  border: 4px solid $border-color;
+	  margin-bottom: 30px;
+	  min-height: auto;
+	}
+  }
+
+  .pricing-tables-wrap-solid .crumina-pricing-table {
+	margin-bottom: 30px;
+  }
+
+  .pricing-tables-wrap-solid > :first-child .crumina-pricing-table {
+	border-radius: 30px 0 0 0;
+  }
+
+  .pricing-tables-wrap-solid > :nth-child(2) .crumina-pricing-table {
+	border-radius: 0 30px 0 0;
+  }
+
+  .pricing-tables-wrap-solid > :nth-child(3) .crumina-pricing-table {
+	border-radius: 0 0 0 30px;
+  }
+
+  .pricing-tables-wrap-solid > :nth-child(4) .crumina-pricing-table {
+	border-radius: 0 0 30px 0;
+  }
+
+  .pricing-tables-triple-wrap > :first-child .crumina-pricing-table,
+  .pricing-tables-triple-wrap > :nth-child(2) .crumina-pricing-table,
+  .pricing-tables-triple-wrap > :nth-child(3) .crumina-pricing-table {
+	border-radius: 50px;
+	margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  .pricing-tables-wrap-solid > :nth-child(1) .crumina-pricing-table,
+  .pricing-tables-wrap-solid > :nth-child(2) .crumina-pricing-table,
+  .pricing-tables-wrap-solid > :nth-child(4) .crumina-pricing-table,
+  .pricing-tables-wrap-solid > :nth-child(3) .crumina-pricing-table {
+	border-radius: 30px;
+	margin: 0 15px 30px;
+  }
+
+  .pricing-table--style4 {
+	.pricing-thumb img {
+	  max-width: 80px;
+	}
+  }
+}

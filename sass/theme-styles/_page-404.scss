@@ -1,0 +1,53 @@
+/*------------- #PAGE 404 --------------*/
+
+
+.page-not-found {
+  .crumina-heading {
+	margin-bottom: 50px;
+  }
+
+  .form--search {
+	margin-bottom: 50px;
+  }
+}
+
+.page-404-thumb {
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  width: 450px;
+  height: 450px;
+  background-color: $primary-color;
+  display: inline-block;
+  box-shadow: inset 0 0 103px 9px #0aeacc;
+
+  .woox-icon {
+	height: 120px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	fill: $white-color;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .page-404-thumb {
+	width: 280px;
+	height: 280px;
+	margin-top: 40px;
+
+	.woox-icon {
+	  height: 80px;
+	}
+  }
+}
+
+@media (max-width: 799px) {
+  .page-not-found {
+	text-align: center;
+  }
+}

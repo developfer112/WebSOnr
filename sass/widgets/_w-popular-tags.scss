@@ -1,0 +1,46 @@
+/*------------- #W-POPULAR-TAGS --------------*/
+
+
+.w-popular-tags {
+
+  .tags-list {
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+
+	li {
+	  margin-right: 10px;
+	  margin-bottom: 10px;
+	  display: inline-block;
+
+	  &:last-child {
+		margin-right: 0;
+	  }
+	}
+  }
+
+  a {
+	padding: 9px 20px;
+	font-weight: $h-font-weight;
+	border: 3px solid $secondary-color;
+	border-radius: 50px;
+	transition: all .3s ease;
+	color: $secondary-color;
+	display: block;
+	line-height: 1;
+
+	&:hover {
+	  box-shadow: inset 3px 3px 0 0 $primary-color, 3px 4px 0 0 $primary-color;
+	}
+  }
+}
+
+.popular-tags--title {
+  li {
+	&:first-child {
+	  font-weight: $h-font-weight;
+	  color: $secondary-color;
+	  margin-right: 30px;
+	}
+  }
+}

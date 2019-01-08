@@ -1,0 +1,25 @@
+/*------------- #W-TAGS --------------*/
+
+
+.w--tags {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+	display: inline-block;
+	margin-right: 25px;
+
+	&:last-child {
+	  margin-right: 0;
+	}
+
+	&:before {
+	  content: '#';
+	  display: inline-block;
+	  position: relative;
+	  margin-right: 5px;
+	  color: $icon-color;
+	  font-weight: $weight-black;
+	}
+  }
+}

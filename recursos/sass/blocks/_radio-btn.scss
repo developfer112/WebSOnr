@@ -1,0 +1,271 @@
+/*------------- #STYLES for RADIO buttons --------------*/
+
+
+.radio {
+  margin-bottom: 1rem;
+}
+.radio label {
+  cursor: pointer;
+  padding-left: 35px;
+  position: relative;
+}
+.radio label span {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transition-duration: 0.2s;
+}
+.radio label .circle {
+  border: 2px solid #c4cad5;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+.radio label .check {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: $primary-color;
+  -webkit-transform: scale3d(0,0,0);
+  -moz-transform: scale3d(0,0,0);
+  -o-transform: scale3d(0,0,0);
+  -ms-transform: scale3d(0,0,0);
+  transform: scale3d(0,0,0);
+}
+.radio label .check:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: rgba(0,0,0, 0.87);
+  left: -20px;
+  top: -20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(1.5,1.5,1);
+  -moz-transform: scale3d(1.5,1.5,1);
+  -o-transform: scale3d(1.5,1.5,1);
+  -ms-transform: scale3d(1.5,1.5,1);
+  transform: scale3d(1.5,1.5,1);
+}
+
+.radio input[type=radio] {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: none;
+}
+.radio input[type=radio]:checked ~ .check, .radio input[type=radio]:checked ~ .circle {
+  opacity: 1;
+}
+.radio input[type=radio]:checked ~ .check {
+  background-color: $secondary-color;
+}
+.radio input[type=radio]:checked ~ .circle {
+  border-color: $secondary-color;
+  box-shadow: inset 1px 2px 0 0 $primary-color, 1px 2px 0 0 $primary-color;
+}
+.radio input[type="radio"]:checked:disabled ~ .circle::before {
+  opacity: 0;
+}
+.radio input[type=radio]:checked:disabled ~ .check {
+  -webkit-transform: scale3d(0.5, 0.5, 1);
+  -moz-transform: scale3d(0.5, 0.5, 1);
+  -o-transform: scale3d(0.5, 0.5, 1);
+  -ms-transform: scale3d(0.5, 0.5, 1);
+  transform: scale3d(0.5, 0.5, 1);
+}
+.radio input[type=radio]:checked ~ .check {
+  -webkit-transform: scale3d(0.4, 0.4, 1);
+  -moz-transform: scale3d(0.4, 0.4, 1);
+  -o-transform: scale3d(0.4, 0.4, 1);
+  -ms-transform: scale3d(0.4, 0.4, 1);
+  transform: scale3d(0.4, 0.4, 1);
+}
+.radio input[type=radio][disabled] ~ .check {
+  background-color: $grey;
+}
+.radio input[type=radio][disabled] ~ .circle {
+  border-color: $radio-checkbox-bg;
+  background-color: $radio-checkbox-bg;
+  box-shadow: inset 1px 2px 0 0 transparent,1px 2px 0 0 transparent;
+}
+
+@keyframes rippleOn {
+  0% {
+	opacity: 0;
+  }
+  50% {
+	opacity: 0.2;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+@keyframes rippleOff {
+  0% {
+	opacity: 0;
+  }
+  50% {
+	opacity: 0.2;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+
+
+/*------------- RADIO buttons Style2 --------------*/
+
+.radio--style2 {
+
+  &.radio label .circle {
+	border-color: $primary-color;
+	background-color: $primary-color;
+  }
+
+  &.radio input[type="radio"][disabled] ~ .check {
+	background-color: $white-color;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle {
+	border-color: $primary-color;
+	background-color: $primary-color;
+	box-shadow: inset 1px 2px 0 0 transparent,1px 2px 0 0 transparent;
+  }
+
+  &.radio input[type="radio"]:checked ~ .check {
+	background-color: $white-color;
+	-webkit-transform: scale3d(0.5, 0.5, 1);
+	-moz-transform: scale3d(0.5, 0.5, 1);
+	-o-transform: scale3d(0.5, 0.5, 1);
+	-ms-transform: scale3d(0.5, 0.5, 1);
+	transform: scale3d(0.5, 0.5, 1);
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle::before {
+	opacity: 0;
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .check {
+	background-color: $white-color;
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .circle {
+	border-color: $radio-checkbox-bg;
+	background-color: $radio-checkbox-bg;
+  }
+}
+
+
+/*------------- RADIO buttons Style3 --------------*/
+
+.radio--style3 {
+  &.radio input[type="radio"]:checked ~ .circle::before {
+	opacity: 0;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle {
+	border-color: #c4cad5;
+	background-color: transparent;
+	box-shadow: inset 1px 2px 0 0 transparent,1px 2px 0 0 transparent;
+  }
+
+  &.radio input[type="radio"]:checked ~ .check {
+	background-color: $dark-light;
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .check {
+	background-color: $radio-checkbox-bg;
+	-webkit-transform: scale3d(0.4, 0.4, 1);
+	-moz-transform: scale3d(0.4, 0.4, 1);
+	-o-transform: scale3d(0.4, 0.4, 1);
+	-ms-transform: scale3d(0.4, 0.4, 1);
+	transform: scale3d(0.4, 0.4, 1);
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .circle {
+	border-color: $radio-checkbox-bg;
+  }
+}
+
+
+/*------------- RADIO buttons Style4 --------------*/
+
+.radio--style4 {
+  &.radio label .circle {
+	border-color: $primary-color;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle::before {
+	opacity: 0;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle {
+	border-color: $primary-color;
+	box-shadow: inset 1px 2px 0 0 transparent,1px 2px 0 0 transparent;
+  }
+
+  &.radio input[type="radio"]:checked ~ .check {
+	background-color: $primary-color;
+	-webkit-transform: scale3d(0.5, 0.5, 1);
+	-moz-transform: scale3d(0.5, 0.5, 1);
+	-o-transform: scale3d(0.5, 0.5, 1);
+	-ms-transform: scale3d(0.5, 0.5, 1);
+	transform: scale3d(0.5, 0.5, 1);
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .circle {
+	border-color: $radio-checkbox-bg;
+	background-color: $radio-checkbox-bg;
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .check {
+	background-color: $white-color;
+  }
+}
+
+
+/*------------- RADIO buttons Style5 --------------*/
+
+.radio--style5 {
+  &.radio label .circle {
+	background-color: #f8fafc;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle::before {
+	opacity: 0;
+  }
+
+  &.radio input[type="radio"]:checked ~ .circle {
+	border-color: $primary-color;
+	background-color: $primary-color;
+	box-shadow: inset 1px 2px 0 0 transparent,1px 2px 0 0 transparent;
+  }
+
+  &.radio input[type="radio"]:checked ~ .check {
+	-webkit-transform: scale3d(0.3, 0.3, 1);
+	-moz-transform: scale3d(0.3, 0.3, 1);
+	-o-transform: scale3d(0.3, 0.3, 1);
+	-ms-transform: scale3d(0.3, 0.3, 1);
+	transform: scale3d(0.3, 0.3, 1);
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .check {
+	background-color: $white-color;
+  }
+
+  &.radio input[type="radio"]:checked:disabled ~ .circle {
+	background-color: $radio-checkbox-bg;
+	border-color: $radio-checkbox-bg;
+  }
+}
+
+.fw-table table > tbody > tr > td {
+  border-top: none;
+}

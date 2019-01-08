@@ -1,0 +1,50 @@
+/*------------- #W-ABOUT --------------*/
+
+
+
+.w-about {
+  p {
+	margin: 25px auto;
+  }
+}
+
+.sidebar {
+  .widget {
+	padding: 40px;
+	border-radius: 50px;
+	box-shadow: 60px 0 100px rgba(61,67,79,.05);
+	margin-bottom: 40px;
+	background-color: $white-color;
+
+	.icon-wave {
+	  fill: $primary-color;
+	  margin-bottom: 5px;
+	}
+
+	&.w-socials-subscriber {
+	  background-color: transparent;
+	  box-shadow: none;
+	}
+  }
+}
+
+.widget-title {
+  margin-bottom: 25px;
+
+  &:after {
+	content: ".";
+	font-size: inherit;
+	color: $primary-color;
+	display: inline-block;
+	position: relative;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .sidebar .widget {
+	padding: 20px;
+  }
+}

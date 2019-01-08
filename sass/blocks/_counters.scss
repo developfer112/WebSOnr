@@ -1,0 +1,78 @@
+/*------------- #COUNTERS --------------*/
+
+
+.crumina-counter-item {
+  &:hover {
+	.counter-line {
+	  .wave-line {
+		fill: $secondary-color;
+
+		&.hover {
+		  opacity: 1;
+		  fill: $primary-color;
+		}
+	  }
+	}
+  }
+}
+
+.counter-numbers {
+  color: $primary-color;
+  font-size: 100px;
+  font-weight: $h-font-weight;
+  display: flex;
+  align-items: center;
+
+  .units {
+	color: $grey-light;
+  }
+}
+
+.counter-line {
+  position: relative;
+  display: inline-block;
+
+  .wave-line {
+    margin-bottom: 30px;
+    fill: $icon-color;
+	position: relative;
+	display: block;
+
+	&.hover {
+	  position: absolute;
+	  top: 2px;
+	  left: 2px;
+	  transition: all .3s ease;
+	  opacity: 0;
+	  fill: $primary-color;
+	}
+  }
+}
+
+.counter-title {
+  margin-bottom: 30px;
+}
+
+.wave-line {
+  width: 80px;
+  height: 10px;
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .counter-numbers {
+	font-size: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .crumina-counter-item {
+	text-align: center;
+  }
+
+  .counter-numbers {
+	justify-content: center;
+  }
+}

@@ -1,0 +1,190 @@
+/*------------- #QUOTES --------------*/
+
+
+.quote--bg-white {
+  background-color: $white-color;
+}
+
+.quote--with-bg {
+  box-shadow: 60px 0 100px rgba(61,67,79,.05);
+}
+
+.quote-bg1 {
+  background-image: url("../img/quote-bg1.jpg");
+}
+
+.quote-bg2 {
+  background-image: url("../img/quote-bg2.jpg");
+}
+
+.quote--style2 {
+  p {
+	font-size: 26px;
+	margin-bottom: 50px;
+	line-height: 1.75em;
+  }
+}
+
+.quote--style3 {
+  font-family: Comfortaa,Arial,"Helvetica Neue",Helvetica,serif,sans-serif;
+  font-style: normal;
+  padding: 60px 0;
+  border-radius: 0;
+
+  &:before {
+	display: none;
+  }
+
+  &.quote--with-bg {
+	padding: 60px;
+	border-radius: 50px;
+  }
+
+  .wave-line {
+	margin-bottom: 30px;
+	width: 80px;
+	height: 10px;
+	fill: $primary-color;
+  }
+
+  p {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: .01em;
+
+	&:first-letter {
+	  font-size: 30px;
+	}
+  }
+}
+
+.quote--style4 {
+  &:before {
+	display: none;
+  }
+
+  p {
+	font-size: 24px;
+
+	& > .quote {
+	  fill: $grey-light;
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  top: -10px;
+	  left: -20px;
+	  z-index: -1;
+	}
+
+	& > .quote-close {
+	  top: auto;
+	  left: auto;
+	  bottom: -10px;
+	  right: -20px;
+	}
+  }
+
+  &.quote--bg-photo {
+	p {
+
+	  & > .quote {
+		width: 50px;
+		height: 50px;
+		top: -10px;
+		left: -20px;
+	  }
+
+	  & > .quote-close {
+		top: auto;
+		left: auto;
+		bottom: -10px;
+		right: -20px;
+	  }
+	}
+  }
+}
+
+.quote--bg-photo {
+  background-size: cover;
+
+  p {
+	color: $white-color;
+	position: relative;
+
+	& > .quote {
+	  fill: $body-font-color;
+	  width: 80px;
+	  height: 90px;
+	  position: absolute;
+	  top: -30px;
+	  left: -40px;
+	  z-index: -1;
+	}
+  }
+
+  &:before {
+	display: none;
+  }
+
+  .author-block {
+	z-index: 1;
+  }
+
+  .author-name {
+	color: $primary-color;
+  }
+
+  .author-prof {
+	color: $grey;
+  }
+
+  .wave-line {
+	z-index: 1;
+	position: relative;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .quote--bg-photo p > .quote {
+	top: -15px;
+	left: -15px;
+	width: 40px;
+	height: 50px;
+  }
+
+  .quote--style3.quote--with-bg {
+	padding: 30px;
+  }
+
+  .quote--style2 p {
+	font-size: 18px;
+  }
+
+  .quote--style3 {
+	padding: 30px 0;
+  }
+
+  .quote--style3 p {
+	font-size: 18px;
+  }
+
+  .quote--style4 p {
+	font-size: 18px;
+  }
+
+  blockquote .author-block {
+	flex-direction: column;
+	text-align: center;
+
+	.avatar {
+	  width: 60px;
+	  height: 60px;
+	  margin-right: 0;
+	  margin-bottom: 10px;
+	}
+  }
+}

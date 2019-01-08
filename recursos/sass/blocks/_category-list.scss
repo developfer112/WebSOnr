@@ -1,0 +1,183 @@
+/*------------- #CATEGORY-LIST --------------*/
+
+
+
+.category-list {
+  list-style: none;
+  margin: 40px 0;
+  padding-left: 0;
+
+  li {
+	display: inline-block;
+	line-height: 1;
+
+	& + li {
+	  margin-left: 40px;
+	}
+
+	a {
+	  line-height: 1;
+
+	  &:hover {
+		&:after {
+		  height: 4px;
+		}
+	  }
+	}
+
+	&.active {
+	  a {
+		color: $primary-color;
+
+		&:after {
+		  bottom: -7px;
+		  height: 4px;
+		}
+	  }
+	}
+  }
+}
+
+.category-list--btn-style {
+
+  li {
+
+	& + li {
+	  margin-left: 0;
+	}
+
+	a {
+	  border-radius: 50px;
+	  padding: 10px 20px;
+	  border: 3px solid transparent;
+	  position: relative;
+	  display: inline-block;
+
+	  &:before {
+		content: '';
+		width: 4px;
+		height: 4px;
+		border-radius: 100%;
+		display: block;
+		position: absolute;
+		background-color: $primary-color;
+		font-size: 40px;
+		transform: translate(-50%, 0);
+		left: 50%;
+		bottom: -14px;
+		opacity: 0;
+	  }
+
+	  &:hover {
+		border-color: $secondary-color;
+		color: $secondary-color;
+		box-shadow: inset 3px 4px 0 0 $primary-color, 3px 4px 0 0 $primary-color;
+	  }
+
+	  &:active {
+		color: $secondary-color;
+		background-color: $primary-color;
+		border-color: $primary-color;
+		box-shadow: inset 3px 4px 0 0 transparent, 3px 4px 0 0 transparent;
+
+		&:before {
+		  opacity: 1;
+		}
+	  }
+	}
+
+	&.active {
+	  a {
+		color: $secondary-color;
+		background-color: $primary-color;
+		box-shadow: inset 3px 4px 0 0 transparent, 3px 4px 0 0 transparent;
+
+		&:before {
+		  opacity: 1;
+		}
+	  }
+
+	  &:hover {
+		a {
+		  border-color: $primary-color;
+		}
+	  }
+	}
+  }
+}
+
+.custom-dropdown {
+  width: 100%;
+  background-color: $white-color;
+  padding: 12px 40px;
+  transition: all .3s ease;
+  font-size: 16px;
+  font-weight: 900;
+  color: $body-font-color;
+  margin-bottom: 30px;
+  border-radius: 50px;
+  box-shadow: 15px 0 40px 5px rgba(61,67,79,.15);
+  outline: 0;
+  position: relative;
+
+  li {
+	width: calc(100% + 80px);
+	margin-left: -40px;
+	cursor: pointer;
+	color: $icon-color;
+
+	&:last-child {
+	  border-radius: 0 0 50px 50px;
+	}
+
+	& + li {
+	  margin-left: -40px;
+	}
+  }
+
+  .icon {
+	position: absolute;
+	display: block !important;
+	right: 40px;
+	top: 15px;
+	fill: $icon-color;
+	text-align: right;
+	background-color: transparent;
+	width: 29px;
+	height: 29px;
+	padding: 0;
+
+	&:hover {
+	  background-color: transparent;
+	}
+
+	.woox-icon {
+	  width: 29px;
+	  height: 29px;
+	}
+  }
+}
+
+.custom-dropdown li {
+  padding: 10px 40px;
+  z-index: 2;
+}
+
+.custom-dropdown li:not(.init):not(.icon) {
+  float: left;
+  display: none;
+  background: $white-color;
+
+  &:hover {
+	background-color: $primary-color;
+  }
+}
+
+.custom-dropdown li.selected:not(.init) {
+  background-color: $primary-color;
+}
+
+.custom-dropdown li.active {
+  position: relative;
+  z-index: 10;
+}

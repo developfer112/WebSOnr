@@ -1,0 +1,16 @@
+/*------------- #CONTENT BLOCK --------------*/
+
+
+.content-block {
+  padding: 60px;
+  border-radius: 50px;
+  box-shadow: 15px 0 40px 0 rgba(61, 67, 79, .08);
+}
+
+.content-block--light {
+  background-color: $white-color;
+}
+
+.content-block--dark {
+  background-color: $dark;
+}

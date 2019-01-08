@@ -1,0 +1,50 @@
+/*------------- #W-CATEGORY-LINKS --------------*/
+
+.w--category-links {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+
+	& + li {
+	  margin-left: 8px;
+	}
+  }
+
+  .woox-icon {
+	width: 18px;
+	height: 18px;
+	color: $icon-color;
+	fill: $icon-color;
+	position: relative;
+	top: 2px;
+  }
+}
+
+.category--with-title {
+  li {
+	&:first-child {
+	  font-weight: $h-font-weight;
+	  color: $secondary-color;
+	  margin-right: 35px;
+	}
+  }
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 640px) {
+  .category--with-title li:first-child {
+	margin-right: 10px;
+  }
+
+  .w--category-links .woox-icon {
+	width: 12px;
+	height: 12px;
+  }
+}

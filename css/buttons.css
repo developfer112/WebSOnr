@@ -1,0 +1,81 @@
+.close{
+	width: 50px;
+}
+.index{
+	padding-top: 250px; 
+	position: relative; 
+	z-index: 998;
+	
+}
+.down-arrow{
+	width: 50px; 
+	text-align: center; 
+	z-index: 998;
+}
+.services{
+	z-index: -100;
+}
+.carteles{
+	font-family: 'Nunito', sans-serif;
+}
+.letra-serv{
+	font-size: 20px;
+	font-family: 'Nunito', sans-serif;
+	max-width: none;
+	margin-bottom: 0px;
+}
+.text-serv1{
+	margin-bottom: 90px;
+}
+.text-serv2{
+	margin-bottom: 30px;
+}
+.div-ancho{
+	margin-left: 230px;
+}
+.color-contacto{
+	color:#0081ee;
+	-webkit-background-clip: text;
+    letter-spacing: 5px;
+}
+.img-serv{
+	margin: 0;
+}
+.alt-serv{
+	height: 760px;
+}
+.pad120{
+	padding-top: 120px;
+}
+@media only screen and (max-width: 800px) {
+		.respon{
+			padding-top: 90px;
+		}    
+		.div-ancho{
+	margin-left: 0px;
+}    
+}
+@media only screen and (max-width: 1535px){
+	.index{
+		padding-top: 0px;
+		} 
+		.div-ancho{
+	margin-left: 0px;
+}    
+}
+/*@media only screen and (max-width: 1366px){
+	.index{
+		padding-top: 100px;
+		} 
+		.div-ancho{
+	margin-left: 0px;
+}    
+}*/
+@media only screen and (max-width: 650px){
+	.index{
+		padding-top: 50px;
+		} 
+		.div-ancho{
+	margin-left: 0px;
+}    
+}

@@ -1,0 +1,89 @@
+/*------------- #W-CATEGORY --------------*/
+
+
+.w-category {
+  .post-category-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+
+	a {
+	  display: flex;
+	  align-items: center;
+	  position: relative;
+	}
+
+	li {
+	  padding: 12px 0;
+	  border-bottom: 1px dashed $grey-light;
+
+	  &:last-child {
+		border-bottom: 0;
+	  }
+
+	  &:hover {
+		a {
+		  color: $body-font-color;
+		}
+
+		.icons {
+		  .woox-icon {
+			opacity: 0;
+
+			&.icon-hover {
+			  opacity: 1;
+			  margin-right: -3px;
+			}
+		  }
+		}
+
+		.cat-count {
+		  color: $secondary-color;
+		  background-color: $primary-color;
+		}
+	  }
+	}
+  }
+
+  .cat-count {
+	font-size: 10px;
+	font-weight: $h-font-weight;
+	color: $input-color;
+	background-color: $grey-light;
+	padding: 5px 10px;
+	border-radius: 30px;
+	line-height: 1;
+	margin-left: 20px;
+	transition: all .3s ease;
+	position: relative;
+  }
+
+  .icons {
+	margin-right: 20px;
+	position: relative;
+	width: 12px;
+	height: 12px;
+
+	.woox-icon {
+	  width: 12px;
+	  height: 12px;
+	  fill: $icon-color;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+
+	  &.icon-hover {
+		opacity: 0;
+		fill: $secondary-color;
+		z-index: 2;
+
+		& + .icon-hover {
+		  top: 1px;
+		  right: -1px;
+		  fill: $primary-color;
+		  z-index: 1;
+		}
+	  }
+	}
+  }
+}

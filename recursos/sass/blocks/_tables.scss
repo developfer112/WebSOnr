@@ -1,0 +1,310 @@
+/*------------- #TABLES --------------*/
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  background-color: $white-color;
+  text-align: center;
+  box-shadow: 15px 0 40px 0 rgba(61, 67, 79, .08);
+  overflow: hidden;
+  border: none;
+}
+
+table * {
+  transition: all .3s ease;
+}
+
+table > tbody > tr {
+  &:hover {
+    box-shadow: 15px 0 40px 0 rgba(61, 67, 79, .08);
+  }
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  padding: 28px;
+  line-height: 1.42857143;
+  vertical-align: middle;
+  border-top: 1px solid $grey-light;
+}
+
+table > tbody > tr > td {
+  border-right: 1px solid $grey-light;
+}
+table > tbody > tr > td:last-child {
+  border-right: none;
+}
+table > thead > tr > th {
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: $white-color;
+  font-weight: $h-font-weight;
+
+  &.bg-border-color {
+    color: $body-font-color;
+  }
+
+  &.bg-primary-color {
+    color: $secondary-color;
+  }
+}
+table > tbody > tr:first-child > td {
+  border-top: none;
+}
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+table > tbody + tbody {
+  border-top: 2px solid $grey-light;
+}
+table table {
+  background-color: #fff;
+}
+
+table col[class*="col-"] {
+  position: static;
+  display:table-column;
+  float: none;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  display:table-cell;
+  float: none;
+}
+table > thead > tr > td.active,
+table > tbody > tr > td.active,
+table > tfoot > tr > td.active,
+table > thead > tr > th.active,
+table > tbody > tr > th.active,
+table > tfoot > tr > th.active,
+table > thead > tr.active > td,
+table > tbody > tr.active > td,
+table > tfoot > tr.active > td,
+table > thead > tr.active > th,
+table > tbody > tr.active > th,
+table > tfoot > tr.active > th {
+  background-color: #f5f5f5;
+}
+
+table > thead > tr > td.success,
+table > tbody > tr > td.success,
+table > tfoot > tr > td.success,
+table > thead > tr > th.success,
+table > tbody > tr > th.success,
+table > tfoot > tr > th.success,
+table > thead > tr.success > td,
+table > tbody > tr.success > td,
+table > tfoot > tr.success > td,
+table > thead > tr.success > th,
+table > tbody > tr.success > th,
+table > tfoot > tr.success > th {
+  background-color: #dff0d8;
+}
+
+table > thead > tr > td.info,
+table > tbody > tr > td.info,
+table > tfoot > tr > td.info,
+table > thead > tr > th.info,
+table > tbody > tr > th.info,
+table > tfoot > tr > th.info,
+table > thead > tr.info > td,
+table > tbody > tr.info > td,
+table > tfoot > tr.info > td,
+table > thead > tr.info > th,
+table > tbody > tr.info > th,
+table > tfoot > tr.info > th {
+  background-color: #d9edf7;
+}
+
+table > thead > tr > td.warning,
+table > tbody > tr > td.warning,
+table > tfoot > tr > td.warning,
+table > thead > tr > th.warning,
+table > tbody > tr > th.warning,
+table > tfoot > tr > th.warning,
+table > thead > tr.warning > td,
+table > tbody > tr.warning > td,
+table > tfoot > tr.warning > td,
+table > thead > tr.warning > th,
+table > tbody > tr.warning > th,
+table > tfoot > tr.warning > th {
+  background-color: #fcf8e3;
+}
+
+table > thead > tr > td.danger,
+table > tbody > tr > td.danger,
+table > tfoot > tr > td.danger,
+table > thead > tr > th.danger,
+table > tbody > tr > th.danger,
+table > tfoot > tr > th.danger,
+table > thead > tr.danger > td,
+table > tbody > tr.danger > td,
+table > tfoot > tr.danger > td,
+table > thead > tr.danger > th,
+table > tbody > tr.danger > th,
+table > tfoot > tr.danger > th {
+  background-color: #f2dede;
+}
+
+
+/*------------- #TABLES Style1--------------*/
+
+.table--style1 {
+  & > tbody > tr > td:first-child {
+	color: $secondary-color;
+	font-weight: $h-font-weight;
+  }
+}
+
+/*------------- #TABLES Style2--------------*/
+
+.table--style2 {
+  & > tbody > tr > td:last-child {
+    color: $secondary-color;
+    font-weight: $h-font-weight;
+  }
+}
+
+/*------------- #TABLES Style3--------------*/
+
+.table--style3 {
+  & > tbody > tr {
+    &:hover {
+      box-shadow: 15px 0 40px 0 transparent;
+    }
+  }
+
+  & > tbody > tr > td {
+    position: relative;
+
+    &:hover {
+      box-shadow: 15px 0 40px 0 rgba(61, 67, 79, .08);
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all .3s ease;
+    }
+
+    &.c-blue {
+      color: $body-font-color;
+
+      &:before {
+        background-color: $blue;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &.c-yellow {
+      color: $body-font-color;
+
+      &:before {
+        background-color: $yellow;
+      }
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    &.c-red {
+      color: $body-font-color;
+
+      &:before {
+        background-color: $red;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    &.c-secondary {
+      color: $body-font-color;
+
+      &:before {
+        background-color: $secondary-color;
+      }
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    &.c-primary {
+      color: $body-font-color;
+
+      &:before {
+        background-color: $primary-color;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 799px) {
+  table > thead > tr > th,
+  table > tbody > tr > th,
+  table > tfoot > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > td,
+  table > tfoot > tr > td {
+    padding: 15px;
+  }
+
+  table {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  table > thead > tr > th,
+  table > tbody > tr > th,
+  table > tfoot > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > td,
+  table > tfoot > tr > td {
+    padding: 5px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}

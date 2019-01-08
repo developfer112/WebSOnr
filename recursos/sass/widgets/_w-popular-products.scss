@@ -1,0 +1,22 @@
+/*------------- #W-POPULAR-PRODUCTS --------------*/
+
+
+.w-popular-products {
+  text-align: center;
+
+  .post {
+	margin-bottom: 0;
+
+	.post-thumb {
+	  border-radius: 20px;
+	}
+  }
+
+  .swiper-pagination {
+	bottom: 40px;
+  }
+}
+
+.sidebar .w-popular-products {
+  padding-bottom: 100px;
+}

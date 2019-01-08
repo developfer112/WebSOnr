@@ -1,0 +1,52 @@
+/*------------- #MODULE I-BOX-OPERAND --------------*/
+
+
+.crumina-module-i-box--operand {
+  position: relative;
+  overflow: hidden;
+}
+
+.i-box--operand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .woox-icon {
+	fill: $icon-color;
+	width: 80px;
+	height: 80px;
+
+	&.icon-equal {
+	  margin-top: 50px;
+	}
+  }
+}
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 1199px) {
+  .i-box--operand {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none;
+	text-align: center;
+	margin: 30px auto;
+  }
+
+  .i-box--operand .woox-icon.icon-equal {
+	margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .i-box--operand {
+	margin: 10px auto;
+  }
+
+  .i-box--operand .woox-icon {
+	width: 50px;
+	height: 50px;
+  }
+}

@@ -1,0 +1,916 @@
+/*------------- #BUTTONS --------------*/
+
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: $weight-black;
+  border-radius: 50px;
+  position: relative;
+  transition: all .3s ease;
+  text-align: center;
+  line-height: 1;
+  color: $white-color;
+  border: 4px solid;
+
+  & + .btn {
+	margin-left: 30px;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.btn--x-large {
+  font-size: 26px;
+  border-radius: 40px;
+  padding: 23px 46px;
+}
+
+.btn--large {
+  font-size: 20px;
+  border-radius: 35px;
+  padding: 21px 42px;
+}
+
+.btn--medium {
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 17px 34px;
+}
+
+.btn--small {
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 9px 20px;
+  border-width: 3px;
+}
+
+.content-block--dark,
+.form--dark {
+  .btn.btn--transparent {
+	color: $white-color;
+
+	&:hover {
+	  border-color: #2b3038;
+
+      &:active {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+	}
+  }
+
+  .btn--hover-decoration.btn--transparent:hover {
+	color: $white-color;
+  }
+
+  .btn:active {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  .btn--icon-right .woox-icon {
+	color: $white-color;
+	fill: $white-color;
+  }
+}
+
+.double-arrow {
+  position: relative;
+  transition: all .3s ease;
+
+  .woox-icon {
+    width: 17px;
+    height: 17px;
+
+    &:last-child {
+      position: absolute;
+      top: 1px;
+      right: -3px;
+    }
+  }
+}
+
+
+
+/*------------- #Color-scheme for buttons --------------*/
+
+.btn--secondary {
+  border-color: $secondary-color;
+  background-color: $secondary-color;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.btn--primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  &:hover {
+    color: $heading-color;
+  }
+}
+
+.btn--dark-light {
+  border-color: $dark-light;
+  background-color: $dark-light;
+
+  &:hover {
+    color: $dark-light;
+  }
+}
+
+.btn--white {
+  border-color: $white-color;
+  background-color: $white-color;
+
+  &:hover {
+	color: $white-color;
+  }
+}
+
+.btn--grey {
+  border-color: $grey;
+  background-color: $grey;
+
+  &:hover {
+    color: $body-font-color;
+  }
+}
+
+.btn--grey-light {
+  border-color: $grey-light;
+  background-color: $grey-light;
+  color: $body-font-color;
+
+  &:hover {
+    color: $heading-color;
+  }
+}
+
+.btn--red {
+  border-color: $red;
+  background-color: $red;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.btn--transparent {
+  background-color: transparent;
+
+  &.btn--with-icon .woox-icon {
+    fill: inherit;
+  }
+
+  &.btn--secondary {
+    color: $secondary-color;
+    fill: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.btn--primary {
+    color: $secondary-color;
+    fill: $secondary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+
+  &.btn--dark-light {
+    color: $dark-light;
+    fill: $dark-light;
+
+    &:hover {
+      background-color: $dark-light;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.btn--white {
+    color: $white-color;
+    fill: $white-color;
+
+    &:hover {
+      background-color: $white-color;
+      color: $secondary-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.btn--grey {
+    fill: $body-font-color;
+    color: $body-font-color;
+
+    &:hover {
+      background-color: $grey;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.btn--grey-light {
+    fill: $body-font-color;
+    color: $body-font-color;
+
+    &:hover {
+      background-color: $grey-light;
+      color: $body-font-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.btn--red {
+    fill: $secondary-color;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $red;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+}
+
+.btn--hover-decoration {
+
+  &:hover {
+    box-shadow: inset 3px 5px 0 0 $primary-color, 3px 5px 0 0 $primary-color;
+  }
+
+  &:active {
+    box-shadow: inset 3px 5px 0 0 transparent, 3px 5px 0 0 transparent;
+  }
+
+  &.btn--round {
+    &:hover {
+      box-shadow: inset 3px 4px 0 0 $primary-color, 3px 4px 0 0 $primary-color;
+    }
+
+    &:active {
+      box-shadow: inset 3px 4px 0 0 transparent, 3px 4px 0 0 transparent;
+    }
+  }
+
+  &.btn--transparent {
+    &:hover {
+      background-color: transparent;
+      color: inherit;
+    }
+
+    &:active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  &.btn--primary {
+    &:hover {
+      box-shadow: inset 3px 5px 0 0 $secondary-color, 3px 5px 0 0 $secondary-color;
+    }
+
+	&:active {
+	  box-shadow: inset 3px 5px 0 0 transparent, 3px 5px 0 0 transparent;
+	}
+  }
+
+  &.btn--white {
+    &:hover {
+      background-color: transparent;
+      color: $white-color;
+    }
+  }
+}
+
+.btn--with-shadow-active {
+
+  &:after {
+	content: "";
+	display: block;
+	width: calc(100% + 8px);
+	height: calc(100% + 8px);
+	border-radius: inherit;
+	left: -4px;
+	top: -4px;
+	position: absolute;
+	transition: all .3s ease;
+	opacity: 0;
+    z-index: 5;
+  }
+
+  &:active {
+	&:after {
+	  opacity: 1;
+	}
+  }
+
+  &.btn--secondary {
+    &:active {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($secondary-color, 15%);
+      }
+    }
+  }
+
+  &.btn--primary {
+    &:active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($primary-color, 15%);
+      }
+    }
+  }
+
+  &.btn--red {
+    &:active {
+      background-color: $red;
+      border-color: $red;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($red, 15%);
+      }
+    }
+  }
+
+  &.btn--dark-light {
+    &:active {
+      background-color: $dark-light;
+      border-color: $dark-light;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($dark-light, 15%);
+      }
+    }
+  }
+
+  &.btn--white {
+    &:active {
+      background-color: $white-color;
+      border-color: $white-color;
+      color: $secondary-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($white-color, 15%);
+      }
+    }
+  }
+
+  &.btn--grey {
+    &:active {
+      background-color: $grey;
+      border-color: $grey;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($grey, 15%);
+      }
+    }
+  }
+
+  &.btn--grey-light {
+    &:active {
+      background-color: $grey-light;
+      border-color: $grey-light;
+      color: $white-color;
+
+      &:after {
+        box-shadow: inset 0 8px 0 0 darken($grey-light, 15%);
+      }
+    }
+  }
+}
+
+.btn--with-shadow-hover {
+
+  &:after {
+    content: "";
+    display: block;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: inherit;
+    left: -4px;
+    top: -4px;
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.btn--secondary {
+    &:hover {
+      &:after {
+        box-shadow: 20px 0 50px 0 $secondary-color;
+      }
+    }
+
+    &:active {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--primary {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $primary-color;
+      }
+    }
+
+    &:active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--red {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $red;
+      }
+    }
+
+    &:active {
+      background-color: $red;
+      border-color: $red;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--dark-light {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $dark-light;
+      }
+    }
+
+    &:active {
+      background-color: $dark-light;
+      border-color: $dark-light;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--white {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $white-color;
+      }
+    }
+
+    &:active {
+      background-color: $white-color;
+      border-color: $white-color;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--grey {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $grey;
+      }
+    }
+
+    &:active {
+      background-color: $grey;
+      border-color: $grey;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.btn--grey-light {
+    &:hover {
+
+      &:after {
+        box-shadow: 20px 0 50px 0 $grey-light;
+      }
+    }
+
+    &:active {
+      background-color: $grey-light;
+      border-color: $grey-light;
+
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.btn--with-icon {
+
+  & > * {
+    display: inline-block;
+  }
+
+  .woox-icon, i {
+	width: 12px;
+	height: 12px;
+    font-size: 14px;
+    color: inherit;
+	fill: $white-color;
+	transition: all .3s ease;
+	position: relative;
+  }
+
+  &:hover {
+	.woox-icon, i {
+	  color: $primary-color;
+	  fill: $primary-color;
+	}
+  }
+
+  &:active {
+	.woox-icon, i {
+	  color: $white-color;
+	  fill: $white-color;
+	}
+  }
+}
+
+.btn--icon-right {
+  .woox-icon, i {
+    margin-left: 10px;
+  }
+}
+
+.btn---icon-left {
+  .woox-icon, i {
+    margin-right: 10px;
+  }
+}
+
+.btn--round {
+  border-radius: 100%;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  border-width: 3px;
+
+  &:hover {
+    .woox-icon {
+      fill: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  .woox-icon {
+	fill: $white-color;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/*================= Styles for links ============*/
+
+a {
+  color: $heading-color;
+  font-weight: $weight-black;
+
+  &:hover {
+    color: $body-font-color;
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+.content-block--dark,
+.form--dark {
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &:active {
+      color: $primary-color;
+    }
+  }
+}
+
+.link--with-decoration {
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+  z-index: 1;
+
+  .woox-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:after {
+	content: "";
+	display: block;
+	border-radius: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 0;
+	position: absolute;
+	transition: all .15s ease;
+	z-index: -1;
+	background-color: $primary-color;
+	width: calc(100% + 5%);
+	height: 35%;
+    opacity: 1;
+  }
+
+  &:hover {
+	color: $body-font-color;
+
+    .woox-icon {
+      fill: $body-font-color;
+    }
+
+	&:after {
+	  bottom: -7px;
+	  height: 5px;
+	}
+  }
+
+  &.h6, &.h5 {
+    .woox-icon {
+      width: 17px;
+      height: 17px;
+    }
+
+	&:hover {
+	  &:after {
+		height: 4px;
+	  }
+	}
+  }
+
+  &:active {
+	color: $primary-color;
+  }
+}
+
+.link--with-decoration-style2 {
+  display: inline-block;
+  color: $primary-color;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -2px;
+    position: absolute;
+    transition: all .15s ease;
+    background-color: $body-font-color;
+    width: calc(100% + 5%);
+    height: 5px;
+    opacity: 0;
+  }
+
+  &:hover {
+    color: $body-font-color;
+
+    &:after {
+      background-color: $body-font-color;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    color: $primary-color;
+
+    &:after {
+      background-color: $primary-color;
+      opacity: 1;
+    }
+  }
+
+  &.h6, &.h5 {
+    &:after {
+      height: 4px;
+    }
+  }
+}
+
+.link--arrow {
+  fill: $body-font-color;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+	fill: $secondary-color;
+
+	.woox-icon-active {
+	  opacity: 1;
+	  fill: $primary-color;
+	}
+  }
+
+  .woox-icon {
+	width: 17px;
+	height: 17px;
+  }
+
+  .woox-icon-active {
+	opacity: 0;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+    z-index: -1;
+  }
+}
+
+
+
+/*------------- #Button back-to-top --------------*/
+
+
+.back-to-top {
+  position: absolute;
+  z-index: 20;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  display: block;
+  fill: $white-color;
+  stroke: inherit;
+  transition: all .3s ease;
+  top: -35px;
+  right: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: $primary-color;
+  text-align: center;
+  box-shadow: inset 5px 5px 20px 0 rgba(61,67,79,.4);
+
+  &:after {
+	content: '';
+	display: block;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	background-color: $primary-color;
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	box-shadow: inset 5px 5px 20px 0 rgba(61,67,79,.4);
+    transition: all .3s ease;
+  }
+
+  &.hidden {
+	opacity: 0;
+  }
+
+  .woox-icon {
+	fill: $white-color;
+	height: 18px;
+	width: 18px;
+  }
+
+  &:hover {
+    box-shadow: inset 5px 5px 20px 0 rgba(61,67,79,0), 5px 5px 20px 0 rgba(61,67,79,.4);
+
+    &:after {
+      box-shadow: inset 5px 5px 20px 0 rgba(61,67,79,0), 5px 5px 20px 0 rgba(61,67,79,.4);
+    }
+  }
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+
+@media (max-width: 1330px) {
+  .back-to-top {
+    right: 50%;
+    margin-right: -40px;
+  }
+}
+
+@media (max-width: 799px) {
+  .back-to-top {
+    margin-right: -30px;
+    width: 60px;
+    height: 60px;
+    line-height: 70px;
+    top: -25px;
+  }
+
+  .btn--x-large {
+    font-size: 20px;
+  }
+
+  .btn--large {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  .btn--medium {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .btn--small {
+    font-size: 14px;
+  }
+}

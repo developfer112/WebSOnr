@@ -1,0 +1,186 @@
+/*------------- #W-CALENDAR --------------*/
+
+
+.w-calendar {
+  text-align: center;
+
+  .xdsoft_datetimepicker {
+	font-family: Comfortaa,Arial,"Helvetica Neue",Helvetica,serif,sans-serif;
+	color: $secondary-color;
+	border-color: transparent;
+	background-color: $white-color;
+	z-index: 10;
+	border-radius: 30px;
+	box-shadow: 15px 0 40px 5px rgba(61,67,79,.15);
+	padding: 20px 34px;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar table {
+	border-radius: 0;
+  }
+
+  .xdsoft_datetimepicker.xdsoft_inline {
+    width: auto;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_datepicker {
+    width: 100%;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td,
+  .xdsoft_datetimepicker .xdsoft_calendar th {
+	border-color: transparent;
+	text-align: center;
+	background-color: transparent;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar th {
+	height: 70px;
+	color: $secondary-color;
+
+	&:last-child {
+	  color: $red;
+	}
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td > div {
+	font-size: 14px;
+	font-weight: 900;
+	width: 40px;
+	padding: 8px 5px;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+	background: $primary-color;
+	box-shadow: $primary-color 1px 3px 0 inset;
+
+	&:hover {
+	  background: $primary-color;
+	}
+  }
+
+  .xdsoft_datetimepicker .xdsoft_datepicker {
+	margin-left: 0;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_monthpicker {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+	background-color: $secondary-color;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_label:hover > span {
+	text-decoration: none;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_month span,
+  .xdsoft_datetimepicker .xdsoft_label span {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: .2em;
+	font-weight: 700;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_month,
+  .xdsoft_datetimepicker .xdsoft_year {
+	width: auto;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_next,
+  .xdsoft_datetimepicker .xdsoft_prev,
+  .xdsoft_datetimepicker .xdsoft_today_button {
+	transition: all .3s ease;
+  }
+
+  table,
+  table > tbody > tr:hover {
+	box-shadow: none;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td div,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
+	border: 2px solid transparent;
+	transition: all .3s ease;
+	border-radius: 100%;
+	overflow: hidden;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td div:hover,
+  .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+	background: transparent !important;
+	box-shadow: inset 2px 3px 0 0 $primary-color, 2px 3px 0 0 $primary-color !important;
+	border-color: $secondary-color;
+	color: $secondary-color;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td:hover {
+	background: transparent !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+	color: $secondary-color !important;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current {
+	background-color: transparent;
+	box-shadow: none !important;
+	border-color: transparent;
+	color: $secondary-color;
+  }
+
+  .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current div {
+	background-color: $border-color;
+	box-shadow: none !important;
+	border-color: transparent;
+	color: $secondary-color;
+
+	&:hover {
+	  background-color: $border-color !important;
+	  box-shadow: none !important;
+	  border-color: transparent;
+	  color: $secondary-color;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1500px) {
+  .w-calendar .xdsoft_datetimepicker .xdsoft_calendar td > div {
+	width: 30px;
+	padding: 3px 5px;
+  }
+
+  .w-calendar .xdsoft_datetimepicker {
+	padding: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .w-calendar .xdsoft_datetimepicker .xdsoft_calendar td > div {
+	font-size: 10px;
+	width: 30px;
+	padding: 6px 2px;
+  }
+
+  .w-calendar .xdsoft_datetimepicker .xdsoft_calendar th {
+	font-size: 10px;
+  }
+
+  .w-calendar .xdsoft_datetimepicker .xdsoft_label {
+	font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .w-calendar .xdsoft_datetimepicker {
+	padding: 20px 10px;
+  }
+}

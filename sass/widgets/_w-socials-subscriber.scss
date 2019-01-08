@@ -1,0 +1,86 @@
+/*------------- #W-SOCIALS-SUBSCRIBER --------------*/
+
+
+.w-socials-subscriber {
+  .list-socials-subscriber {
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+	border-radius: 20px;
+	overflow: hidden;
+  }
+
+  .subscriber-item {
+	display: flex;
+	align-items: center;
+	height: 62px;
+	max-height: 62px;
+	padding: 20px;
+	color: $white-color;
+
+	.woox-icon {
+	  width: 22px;
+	  height: 22px;
+	  margin-right: 22px;
+	}
+
+	.join-follow {
+	  display: block;
+	  margin-left: auto;
+	  color: $white-color;
+	  text-transform: uppercase;
+	  font-size: 10px;
+	  font-weight: $h-font-weight;
+	  letter-spacing: 2px;
+	  line-height: 1;
+	  padding: 6px 30px;
+	  border-radius: 30px;
+	  background-color: rgba(255,255,255,.1);
+	  min-width: 110px;
+	  max-width: 110px;
+	  text-align: center;
+
+	  &:hover {
+		color: $primary-color;
+	  }
+	}
+
+	.subscriber-count {
+	  font-family: 'Playfair Display', serif;
+	  font-size: 24px;
+	  font-weight: $h-font-weight;
+
+	  span {
+		font-size: 16px;
+		font-weight: 400;
+		margin-left: 5px;
+	  }
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1400px) {
+  .widget.w-socials-subscriber {
+	padding: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .w-socials-subscriber .subscriber-item .woox-icon {
+	margin-right: 10px;
+	width: 18px;
+	height: 18px;
+  }
+
+  .w-socials-subscriber .subscriber-item .subscriber-count {
+	font-size: 18px;
+  }
+
+  .w-socials-subscriber .subscriber-item .join-follow {
+	min-width: auto;
+	max-width: none;
+  }
+}

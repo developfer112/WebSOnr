@@ -1,0 +1,127 @@
+/*------------- #OUR-VIDEO --------------*/
+
+
+.crumina-our-video {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+  border-radius: 50px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.full-width {
+	border-radius: 0;
+	padding: 180px 0;
+
+	.our-video-content {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: none;
+	  margin: 0 auto;
+	}
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .our-video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+	color: $white-color;
+  }
+
+  .video-title {
+	font-size: 30px;
+	font-weight: $h-font-weight;
+	line-height: 1;
+  }
+
+  .video-sub-title {
+	font-size: 30px;
+	line-height: 1;
+  }
+
+  .video-time {
+	font-size: 14px;
+	line-height: 1;
+	background-color: $white-color;
+	border-radius: 30px;
+	padding: 6px 17px;
+	color: $body-font-color;
+	display: inline-block;
+	margin-top: 30px;
+  }
+}
+
+.video-control {
+  .woox-icon {
+	fill: $white-color;
+	color: $white-color;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 30px;
+  }
+}
+
+.video-control-youtube {
+  padding: 15px 23px 14px 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $c-youtube;
+  display: block;
+  line-height: 1;
+
+  .woox-icon {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 0;
+  }
+}
+
+.bg-video {
+  background-image: url("../img/video-thumb1.jpg");
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 992px) {
+  .video-control-youtube {
+	padding: 10px 18px 9px 25px;
+  }
+
+  .video-control-youtube .woox-icon {
+	width: 20px;
+	height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crumina-our-video.full-width {
+	padding: 40px 0;
+  }
+
+  .crumina-our-video .video-title,
+  .crumina-our-video .video-sub-title {
+	font-size: 20px;
+  }
+
+  .video-control .woox-icon {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+  }
+
+  .video-control-youtube .woox-icon {
+	width: 20px;
+	height: 20px;
+	margin-bottom: 0;
+  }
+}

@@ -1,0 +1,47 @@
+/*------------- #W-SOCIALS-COUNTER --------------*/
+
+
+.w-socials-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .social-counter-item {
+	text-align: center;
+
+	& + .social-counter-item {
+	  margin-left: 50px;
+	}
+
+	.woox-icon {
+	  width: 42px;
+	  height: 42px;
+	  margin-bottom: 6px;
+	}
+
+	.counter {
+	  font-size: 26px;
+	  font-family: 'Playfair Display', serif;
+	  color: $secondary-color;
+	  font-weight: $h-font-weight;
+	  line-height: 1;
+	  margin-bottom: 7px;
+	}
+
+	.descr {
+	  font-size: 14px;
+	  color: $grey;
+	  font-weight: $h-font-weight;
+	  text-transform: uppercase;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .w-socials-counter .social-counter-item .counter {
+	font-size: 20px;
+  }
+}
